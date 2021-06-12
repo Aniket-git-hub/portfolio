@@ -8,7 +8,7 @@
       </div>
       <div class="input full">
         <input type="text" id="message" required />
-        <label for="message">message</label>
+        <label for="message">Your Name</label>
       </div>
       <div class="input full">
         <textarea id="textarea" rows="5" requried></textarea>
