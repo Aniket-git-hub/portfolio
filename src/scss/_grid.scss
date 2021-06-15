@@ -1,0 +1,72 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.center {
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+
+$columns:12;
+
+@for $i from 1 through $columns {
+    .xs#{$i} {
+        width: 100% / ($columns / $i);
+    }
+
+    .xsOffset-#{$i} {
+        margin-left: 100% / ($columns / $i);
+    }
+}
+
+@media screen and (min-width:450px) {
+    @for $i from 1 through $columns {
+        .s#{$i} {
+            width: 100% / ($columns / $i);
+        }
+
+        .sOffset-#{$i} {
+            margin-left: 100% / ($columns / $i);
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    @for $i from 1 through $columns {
+        .m#{$i} {
+            width: 100% / ($columns / $i);
+        }
+
+        .mOffset-#{$i} {
+            margin-left: 100% / ($columns / $i);
+        }
+    }
+}
+
+@media screen and (min-width:900px) {
+    @for $i from 1 through $columns {
+        .l#{$i} {
+            width: 100% / ($columns / $i);
+        }
+
+        .lOffset-#{$i} {
+            margin-left: 100% / ($columns / $i);
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    @for $i from 1 through $columns {
+        .xl#{$i} {
+            width: 100% / ($columns / $i);
+        }
+
+        .xlOffset-#{$i} {
+            margin-left: 100% / ($columns / $i);
+        }
+    }
+}

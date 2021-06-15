@@ -8,155 +8,135 @@ $fontOne:'Roboto';
 $fontTwo:'Lato';
 $fontThree:'Poppins';
 //colors
-$colorOne:  hsl(251, 33%, 67%);
+$colorOne: hsl(251, 33%, 67%);
 $colorTwo:hsl(227, 31%, 38%);
 $colorThree:hsl(218, 72%, 67%);
 $colorFour:hsl(228, 61%, 53%);
 $colorFive:hsl(340, 13%, 77%);
 
 
-* {
+*, ::before, ::after {
   padding: 0;
   margin: 0;
   letter-spacing: 1px;
   box-sizing: border-box;
   font-family: $fontThree, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
-  transition: ease-in-out;
-  color:white;
+  transition: All .5s;
+  color: white;
 }
 
-body{
+.primaryColor {
+  color: darken($color: $colorThree, $amount: 5)
+}
+
+body {
   background-color: darken($color: $colorTwo, $amount: 5);
 }
 
-.nav-section {
-  background-color: darken($color: $colorTwo, $amount: 5);
-  padding-left: 15%;
-  nav {
-    width: 100%;
+
+nav {
+  padding: .5rem;
+  width: 100%;
+  justify-content: space-around;
+
+  h2 {
+    display: inline-block;
+  }
+
+  ul {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    align-items: center;
 
-    h2 {
-      display: inline-block;
+    li {
+      list-style: none;
+      padding: 0.1rem .6rem;
 
-    }
+      &:hover {
+        background-color: darken($color: $colorThree, $amount: 15);
+        border-radius: 999px;
+      }
 
-    ul {
-      display: inline-flex;
+      a {
+        text-decoration: none;
 
-      li {
-        float: right;
-        list-style: none;
-        padding: 0 .5rem;
-
-        a {
-          text-decoration: none;
-          color: white;
-        }
       }
     }
   }
 }
 
+.border {
+  border: 1px solid black;
+}
 
-.fab{
-  color:white;
+a {
+  text-decoration: none;
 }
 
 header {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
 
-  // background:hsl(233, 27%, 37%);
+  .right {
+    background: hsl(233, 27%, 37%);
+    border-bottom-left-radius: 2rem;
+  }
 
-  .header-main {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+  .img-box {
+    background-image: url('./assets/subject.jpg');
+    background-size: contain;
+  }
 
-    .header-left {
-      width: 10%;
-  
-      display: grid;
-      place-items: center;
-      height: auto;
-
-      div {
-        background-color: $colorThree;
-        
-        padding:1rem;
-        p{
-          padding:1rem 0;
-        }
-        button{
-          padding:.4rem 1rem;
-          border:none;
-          border-radius: .2rem;
-          background-color:$colorOne;
-          color:white;
-          
-        }
-      }
+  .hireme {
+    width: 100%;
+    transform: rotate(270deg);
+    transform-origin: 10 10;
+    background-color: $colorThree;
+    padding: 1rem;
+    @media screen and (max-width:450px) {
+      transform: rotate(0deg);
+    transform-origin: 0 0;
     }
+  }
 
-    .header-right {
-      height: auto;
-      padding: 0 0 2rem 2rem;
-      width: 90%;
-      display:flex;
-      flex-direction: row;
-      .left{
-        padding-left:2rem;
-        width:50%;
-        display:grid;
-        place-items: center;
-        border-bottom-left-radius: 3rem;
-        background-color: lighten($color: $colorTwo, $amount: 5);
-        p{
-          font-size: small;
-          padding:1em 0;
-          width:70%;
-          line-height: 1.3rem;
-        }
-        h1{
-          font-size:3em;
-          letter-spacing: 1px;
-          font-weight: bolder;
-          span{
-            color: lightness($color: $colorThree);
-          }
-        }
-        button{
-          padding:.4rem 1rem;
-          border:none;
-          background-color:$colorOne;
-          box-shadow: 2px 2px 2px 4px $colorTwo;
-          a{
-            text-decoration: none;
-          }
-        }
-      }
-      .right{
-        width:50%;
-        background-image: url('./assets/subject.jpg');
-        background-size: contain;
-      }
+  .hiremeBtn {
+    background-color: lighten($color: $colorThree, $amount: 8);
+  }
+
+  .resumeBtn {
+    background-color: lighten($color: $colorTwo, $amount: 15);
+    color: $colorOne;
+  }
+
+  article {
+    margin-left: 4rem;
+
+    p {
+      width: 70%;
+      font-weight: lighter;
 
     }
 
+    h1 {
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: Poppins;
+    }
+  }
+
+  button {
+    border: none;
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    border-radius: .1rem;
   }
 }
-
-
 
 main {
   padding: 2em;
 
   .about {
-    margin-top:6em;
+    margin-top: 6em;
     padding: 4em 2rem;
     display: flex;
     flex-direction: row;
@@ -189,11 +169,11 @@ main {
 
   .skills {
     margin: 4em 2rem;
-    padding: 1rem 0;
+    padding: 4rem 0;
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
     border-radius: 2rem;
+    background-color: darken($color: $colorTwo, $amount: 8);
 
     .skill-card {
       display: flex;
@@ -294,7 +274,8 @@ main {
       padding: 2rem 2rem;
       background-color: $colorTwo;
       border-radius: 1.2rem;
-      margin:1rem 0;
+      margin: 1rem 0;
+
 
       .experience-card {
 
@@ -303,6 +284,11 @@ main {
         p {
           padding-left: 1rem;
           margin: 0.3rem 0;
+          font-weight: lighter;
+        }
+
+        p {
+          font-size: small;
         }
       }
 
@@ -311,6 +297,7 @@ main {
         padding: .3rem 1rem;
         border-radius: .8rem;
         background-color: $colorOne;
+        font-weight: lighter;
         width: 70%;
       }
     }
@@ -346,12 +333,24 @@ main {
     }
 
     .project-card {
-      .img {
-        img {
-          width: 100px;
-          height: 100px;
+      border: 1px solid blue;
+      padding: 2rem;
+
+      .card {
+        background-color: $colorTwo;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+
+        .img {
+          height: 200px;
+          width: 200px;
+          background-image: url('./assets/subject.jpg');
+          background-size: contain;
         }
       }
+
 
     }
 
@@ -378,10 +377,11 @@ main {
   }
 
   .testimonial {
-    margin: 4em 2rem;
-    padding: 2rem;
+    margin: 4em -2rem;
+    padding: 2rem 6rem;
     display: flex;
     flex-direction: row;
+    background-color: darken($color: $colorTwo, $amount: 8);
 
     .left {
       width: 30%;
@@ -392,6 +392,9 @@ main {
 
     .right {
       padding: 0 2rem;
+      width: 70%;
+      display: grid;
+      place-items: center;
 
       .testimonial-title {
         padding-bottom: 2rem;
@@ -407,9 +410,11 @@ main {
         }
       }
 
-      width:70%;
-      display: grid;
-      place-items: center;
+      .quote {
+        font-style: italic;
+        font-family: $fontTwo;
+        padding: 1rem 0;
+      }
 
     }
 
