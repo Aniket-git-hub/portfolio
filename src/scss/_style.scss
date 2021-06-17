@@ -13,7 +13,6 @@ $colorTwo:hsl(227, 31%, 38%);
 $colorThree:hsl(218, 72%, 67%);
 $colorFour:hsl(228, 61%, 53%);
 
-
 *,
 ::before,
 ::after {
@@ -33,31 +32,23 @@ $colorFour:hsl(228, 61%, 53%);
  *
  */
 
-
 .primaryColor {
   color: darken($color: $colorThree, $amount: 5)
-}
-
-.border {
-  border: 1px solid black;
 }
 
 a {
   text-decoration: none;
 }
-
 .img-box {
   background-image: url('./assets/subject.jpg');
   background-size: contain;
 }
-
 .section-title {
   margin-bottom: 2rem;
   h4 {
     font-size: small;
     font-weight: lighter;
   }
-
   h2 {
     font-weight: bolder;
   }
@@ -95,9 +86,12 @@ header {
     transform: rotate(270deg);
     transform-origin: 10 10;
     background-color: $colorThree;
+    display: grid;
+    place-items: center;
     @media screen and (max-width:450px) {
       transform: rotate(0deg);
       transform-origin: 0 0;
+      margin-bottom: 2em;
     }
   }
 
@@ -154,7 +148,7 @@ nav {
     justify-content: space-around;
     li {
       list-style: none;
-      padding: 0.1rem .6rem;
+      padding: 0.3rem .6rem;
       &:hover {
         background-color: darken($color: $colorThree, $amount: 15);
         border-radius: 999px;

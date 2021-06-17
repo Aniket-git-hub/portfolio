@@ -33,6 +33,7 @@
   </nav>
 
   <header class="row">
+
     <section class="xs12 s2 m2 l2 xl2 row center align-center">
       <div class="hireme">
         <p>Available For Porjects</p>
@@ -52,7 +53,7 @@
             Hi, i m professional web developer and a student. Need any help?
           </p>
           <button class="resumeBtn">
-            <a href="./assets/resume.pdf" download="aniketsresume"
+            <a href="../pdf/resume.pdf" download="aniketsresume"
               >Download Resume</a
             >
           </button>
