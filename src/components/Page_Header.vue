@@ -45,7 +45,7 @@
       <section class="xs12 s10 m10 l10 xl10 row right ">  
           <section class="xs12 s12 m8 l8 xl7 row center align-center">
             <article>
-              <p class="primaryColor">Web Developer</p>
+              <p class="primaryColor monospaced">Web Developer</p>
               <h1>
                 Hello, I'm
                 <span class="primaryColor">Aniket!</span>

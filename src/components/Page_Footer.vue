@@ -3,7 +3,8 @@
     <section class="letstryme">
       <div>
         <h1>let's try me!</h1>
-        <ul>
+        <nav class="row">
+             <ul class="row">
           <li>
             <a href="#"><i class="fab fa-facebook"></i></a>
           </li>
@@ -14,36 +15,45 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
           </li>
         </ul>
+        </nav>
+     
       </div>
     </section>
-    <section class="nav-section">
-      <nav>
-        <p>&copy; Letsbug.com, 2021 All rights reserved</p>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </li>
-          <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+   
+       <nav class="row">
+
+    <h2> &copy; <span class="primaryColor">L</span>etsbug.com</h2>
+
+    <ul class="row">
+      <li><a href="#">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <ul class="row">
+      <li>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/aniket-singh-80371b201/"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://github.com/Aniket-git-hub"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li>
           <li><a href="#"><i class="fab fa-youtube"></i></a></li>
           <li><a href="#"><i class="fab fa-hackerrank"></i></a></li> -->
-        </ul>
-      </nav>
-    </section>
+    </ul>
+  </nav>
+  
   </footer>
 </template>
 <script>
@@ -59,5 +69,5 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-
+@import "@/scss/_grid.scss";
 </style>
