@@ -12,7 +12,6 @@ $colorOne: hsl(251, 33%, 67%);
 $colorTwo:hsl(227, 31%, 38%);
 $colorThree:hsl(218, 72%, 67%);
 $colorFour:hsl(228, 61%, 53%);
-$colorFive:hsl(340, 13%, 77%);
 
 
 *,
@@ -28,49 +27,15 @@ $colorFive:hsl(340, 13%, 77%);
   color: white;
 }
 
+/**
+ *
+ * utiliti css classes
+ *
+ */
 
-
-.monospaced {
-  font-family: 'Lato', monospace;
-}
 
 .primaryColor {
   color: darken($color: $colorThree, $amount: 5)
-}
-
-body {
-  background-color: darken($color: $colorTwo, $amount: 5);
-}
-
-
-nav {
-  padding: .5rem;
-  width: 100%;
-  justify-content: space-around;
-
-  h2 {
-    display: inline-block;
-  }
-
-  ul {
-    display: flex;
-    align-items: center;
-
-    li {
-      list-style: none;
-      padding: 0.1rem .6rem;
-
-      &:hover {
-        background-color: darken($color: $colorThree, $amount: 15);
-        border-radius: 999px;
-      }
-
-      a {
-        text-decoration: none;
-
-      }
-    }
-  }
 }
 
 .border {
@@ -85,6 +50,35 @@ a {
   background-image: url('./assets/subject.jpg');
   background-size: contain;
 }
+
+.section-title {
+  margin-bottom: 2rem;
+  h4 {
+    font-size: small;
+    font-weight: lighter;
+  }
+
+  h2 {
+    font-weight: bolder;
+  }
+  p {
+    margin: 1rem 0;
+    font-size: small;
+  }
+}
+.quote {
+  font-style: italic;
+  font-family: $fontTwo;
+  padding: 1rem 0;
+}
+
+body {
+  background-color: darken($color: $colorTwo, $amount: 5);
+}
+
+/*=============================================
+=            header            =
+=============================================*/
 
 header {
   width: 100vw;
@@ -140,11 +134,41 @@ header {
   }
 }
 
+/*=====  End of header  ======*/
+
+
+/*=============================================
+=            navigation            =
+=============================================*/
+
+nav {
+  padding: .5rem;
+  width: 100%;
+  justify-content: space-around;
+  h2 {
+    display: inline-block;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      padding: 0.1rem .6rem;
+      &:hover {
+        background-color: darken($color: $colorThree, $amount: 15);
+        border-radius: 999px;
+      }
+
+    }
+  }
+}
+
+/*=====  End of navigation  ======*/
 
 #about {
   min-height: 90vh;
   padding: 4em 2rem;
-
   article {
     padding: 0 2em;
   }
@@ -152,7 +176,13 @@ header {
 
 #skills {
   min-height: 80vh;
-
+  h1{
+    padding:1rem 0;
+    font-size: 38px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    color:darken($color: $colorTwo, $amount: 1);
+  }
   article {
     background-color: darken($color: $colorTwo, $amount: 8);
     height: fit-content;
@@ -189,69 +219,26 @@ header {
 #say-Hello {
   margin: 1rem 0;
   height: 200px;
-
   .left-section {
     padding: .5rem 2rem;
-
     .img {
       width: 100%;
       height: 100px;
       background-image: url('./assets/subject.jpg');
       background-size: contain;
     }
-    // @media screen and (min-width:1200px) {
-    //   margin: 1rem 15%;
-    // }
   }
-
   .right-section {
-    width: 50%;
     display: grid;
     place-items: center;
-
     div {
       display: grid;
       place-items: center;
     }
-
     h3 {
       padding: 1.5rem 0;
     }
-
-    ul {
-      display: flex;
-
-      li {
-        list-style: none;
-
-        a {
-          text-decoration: none;
-          padding: 0 2rem;
-        }
-      }
-    }
   }
-}
-
-.section-title {
-  margin-bottom: 2rem;
-  h4 {
-    font-size: small;
-    font-weight: lighter;
-  }
-
-  h2 {
-    font-weight: bolder;
-  }
-  p {
-    margin: 1rem 0;
-    font-size: small;
-  }
-}
-.quote {
-  font-style: italic;
-  font-family: $fontTwo;
-  padding: 1rem 0;
 }
 
 #experience {
@@ -313,7 +300,6 @@ header {
   }
 }
 
-
 #portfolio {
   padding:0 2rem;
   .project-card {
@@ -355,28 +341,26 @@ header {
   }
 }
 
+/*=============================================
+=            footer            =
+=============================================*/
+
 footer {
   .letstryme {
     display: grid;
     place-items: center;
     padding: 4rem;
-
+    h2{
+      padding:1rem 1rem;
+      font-weight: lighter;
+    }
     h1 {
       font-weight: bolder;
       font-size: 30px;
     }
-
-    // ul {
-    //   display: inline-flex;
-    //   float: left;
-
-    //   // li {
-    //   //   list-style: none;
-    //   //   // a {
-    //   //   //   text-decoration: none;
-    //   //   //   color: black;
-    //   //   // }
-    //   // }
-    // }
   }
 }
+
+/*=====  End of footer  ======*/
+
+

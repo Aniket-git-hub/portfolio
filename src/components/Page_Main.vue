@@ -25,25 +25,18 @@
 
   <section class="row center align-center" id="skills">
     <article class="row">
-      <div 
+      <div class="xs12 s12 m12 l12 xl12 row center">
+        <h1>SPECILIZING IN</h1>
+      </div>
+      <div
         class="xs12 s6 m4 l4 xl4 skill-card"
         v-for="skill in skills"
         :key="skill.title"
-        >
+      >
         <div class="img"></div>
         <h3>{{ skill.title }}</h3>
         <p>{{ skill.description }}</p>
       </div>
-      <!-- <div class="xs12 s6 m4 l4 xl4 skill-card">
-        <div class="img"></div>
-        <h3>Moblie UI design</h3>
-        <p>I'm a professional UX designer with 4 years of exprience</p>
-      </div>
-      <div class="xs12 s6 m4 l4 xl4 skill-card">
-        <div class="img"></div>
-        <h3>Brandign Design</h3>
-        <p>I'm a professional UX designer with 4 years of exprience</p>
-      </div> -->
     </article>
   </section>
 
@@ -53,17 +46,23 @@
     </div>
     <article class="xs12 s6 m6 l6 xl6 right-section">
       <h3>Say Hello!</h3>
-      <ul class="row">
-        <li>
-          <a href="#"><i class="fab fa-linkedin-square"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-github"></i></a>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/aniket-singh-80371b201/"
+              ><i class="fab fa-linkedin-in fa-2x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/aniketsingh6967/"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
     </article>
   </section>
 
@@ -74,21 +73,21 @@
     </div>
 
     <div class="row list">
-      <div class="xs12 s12 m4 l4 xl4 
-      experience-card
-      "
-      v-for="edu in education" :key="edu.course"
+      <div
+        class="xs12 s12 m4 l4 xl4 experience-card"
+        v-for="edu in education"
+        :key="edu.course"
       >
-        <h4 class="title">{{edu.from}}</h4>
-        <h2>{{edu.course}}</h2>
+        <h4 class="title">{{ edu.from }}</h4>
+        <h2>{{ edu.course }}</h2>
         <p>
-          {{ edu.description}}
+          {{ edu.description }}
         </p>
       </div>
     </div>
 
     <div class="row list">
-      <div class="xs12 s12 m4 l4 xl4  experience-card">
+      <div class="xs12 s12 m4 l4 xl4 experience-card">
         <h4 class="title">2017 - 2020</h4>
         <h2>Designer at Microsoft</h2>
         <p>
@@ -96,7 +95,7 @@
           products.
         </p>
       </div>
-      <div class=" xs12 s12 m4 l4 xl4  experience-card">
+      <div class="xs12 s12 m4 l4 xl4 experience-card">
         <h4 class="title">2017 - 2020</h4>
         <h2>User Researcher at Apple</h2>
         <p>
@@ -104,7 +103,7 @@
           products.
         </p>
       </div>
-      <div class=" xs12 s12 m4 l4 xl4  experience-card">
+      <div class="xs12 s12 m4 l4 xl4 experience-card">
         <h4 class="title">2017 - 2020</h4>
         <h2>lead Designer at Dribble</h2>
         <p>
@@ -115,8 +114,8 @@
     </div>
   </section>
 
-  <section class=" " id="portfolio">
-    <div class="section-title ">
+  <section class="" id="portfolio">
+    <div class="section-title">
       <h4 class="primaryColor">Portfolio</h4>
       <h2>Education & Exprerience</h2>
       <p>
@@ -125,17 +124,17 @@
       </p>
     </div>
     <div class="row">
-    <article
-      class="xs12 s6 m4 l3 xl3 project-card"
-      v-for="project in projects"
-      :key="project.title"
-    >
-      <div class="card">
-        <div class="img"></div>
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-      </div>
-    </article>
+      <article
+        class="xs12 s6 m4 l3 xl3 project-card"
+        v-for="project in projects"
+        :key="project.title"
+      >
+        <div class="card">
+          <div class="img"></div>
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -158,35 +157,77 @@
       </div>
     </article>
   </section>
-
 </template>
 <script>
 export default {
   name: "form",
   setup() {
     const skills = [
-      {title:'Frontend', description:'This is a brief description of my skill like from where i have got it.'},
-      {title:'Backend', description:'This is a brief description of my skill like from where i have got it.'},
-      {title:'DevOps', description:'This is a brief description of my skill like from where i have got it.'}
-    ]
+      {
+        title: "Frontend",
+        description:
+          "This is a brief description of my skill like from where i have got it.",
+      },
+      {
+        title: "Backend",
+        description:
+          "This is a brief description of my skill like from where i have got it.",
+      },
+      {
+        title: "DevOps",
+        description:
+          "This is a brief description of my skill like from where i have got it.",
+      },
+    ];
 
     const projects = [
-      {title:'CornaTacker', description:'Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.'},
-      {title:'visualizer', description:'Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.'},
-      {title:'Madhu', description:'Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.'},
-      {title:'examProject', description:'Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.'}
-    ]
+      {
+        title: "CornaTacker",
+        description:
+          "Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.",
+      },
+      {
+        title: "visualizer",
+        description:
+          "Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.",
+      },
+      {
+        title: "Madhu",
+        description:
+          "Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.",
+      },
+      {
+        title: "examProject",
+        description:
+          "Thisi s a brief description about this project that i have made in my free time when i had nothing  to do and every body was busy expect me.",
+      },
+    ];
 
     const education = [
-      {course:'BBA-Computer Application', from:'University of Pune', description:' User ecperience (UX) design is the process design teams use to creat products.' },
-      {course:'HSC', from:'Intermediate', description:' User ecperience (UX) design is the process design teams use to create products.' },
-      {course:'SSC', from:'State Board', description:' User ecperience (UX) design is the process design teams use to create products.' }
-    ]
+      {
+        course: "BBA-Computer Application",
+        from: "University of Pune",
+        description:
+          " User ecperience (UX) design is the process design teams use to creat products.",
+      },
+      {
+        course: "HSC",
+        from: "Intermediate",
+        description:
+          " User ecperience (UX) design is the process design teams use to create products.",
+      },
+      {
+        course: "SSC",
+        from: "State Board",
+        description:
+          " User ecperience (UX) design is the process design teams use to create products.",
+      },
+    ];
 
     return {
       skills,
       projects,
-      education
+      education,
     };
   },
 };
