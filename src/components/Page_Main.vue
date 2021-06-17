@@ -139,7 +139,7 @@
     </div>
   </section>
 
-  <section class="row border" id="testimonial">
+  <section class="row" id="testimonial">
     <div class="xs12 s12 m5 l5 xl5 img-box">
       <img src="#" alt="some image" />
     </div>

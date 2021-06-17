@@ -97,11 +97,10 @@ header {
 
   .hireme {
     width: 100%;
+    padding: 1rem;
     transform: rotate(270deg);
     transform-origin: 10 10;
     background-color: $colorThree;
-    padding: 1rem;
-
     @media screen and (max-width:450px) {
       transform: rotate(0deg);
       transform-origin: 0 0;
@@ -276,36 +275,39 @@ header {
       h2{
         font-size: large;
       }
-    }
-   
-    .title {
-      border: none;
-      padding: .3rem 1rem;
-      border-radius: .8rem;
-      background-color: $colorOne;
-      font-weight: lighter;
-      width:90%;
-      position: relative;
-      &::after{
-        content: '';
-        display: block;
-        background-color: $colorOne;
-        position: absolute;
-        top:50%;
-        left:100%;
-        width:100px;
-        height: 2px;
-        @media screen and (max-width:450px) {
-          left:0;
-          width:2px;
-          height:200px;
+
+      &:not(:last-child) .title {
+        &::after{
+          content: '';
+          display: block;
+          background-color: $colorOne;
+          position: absolute;
+          top:50%;
+          left:100%;
+          width:100px;
+          height: 2px;
+          @media screen and (max-width:450px) {
+            left:0;
+            width:2px;
+            height:200px;
+          }
         }
-      }  
-     
+      }
+
+      .title {
+        border: none;
+        padding: .3rem 1rem;
+        border-radius: .8rem;
+        background-color: $colorOne;
+        font-weight: lighter;
+        width:90%;
+        position: relative;
+      }
+
     }
-    
-   
+
   }
+
   @media screen and (min-width:1200px) {
     margin: 4em 15%;
   }
@@ -352,8 +354,6 @@ header {
     padding: 4em 15%;
   }
 }
-
-
 
 footer {
   .letstryme {
