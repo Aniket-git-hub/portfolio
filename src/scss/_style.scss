@@ -39,24 +39,34 @@ $colorFour:hsl(228, 61%, 53%);
 a {
   text-decoration: none;
 }
+
 .img-box {
-  background-image: url('./assets/subject.jpg');
-  background-size: contain;
+  // background-image: url('./assets/subject.jpg');
+  // background-size: contain;
+  img{
+    width:90%;
+    height:90%;
+  }
 }
+
 .section-title {
   margin-bottom: 2rem;
+
   h4 {
     font-size: small;
     font-weight: lighter;
   }
+
   h2 {
     font-weight: bolder;
   }
+
   p {
     margin: 1rem 0;
     font-size: small;
   }
 }
+
 .quote {
   font-style: italic;
   font-family: $fontTwo;
@@ -88,6 +98,7 @@ header {
     background-color: $colorThree;
     display: grid;
     place-items: center;
+
     @media screen and (max-width:450px) {
       transform: rotate(0deg);
       transform-origin: 0 0;
@@ -139,16 +150,20 @@ nav {
   padding: .5rem;
   width: 100%;
   justify-content: space-around;
+
   h2 {
     display: inline-block;
   }
+
   ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     li {
       list-style: none;
       padding: 0.3rem .6rem;
+
       &:hover {
         background-color: darken($color: $colorThree, $amount: 15);
         border-radius: 999px;
@@ -163,20 +178,24 @@ nav {
 #about {
   min-height: 90vh;
   padding: 4em 2rem;
+
   article {
     padding: 0 2em;
+    p{font-size: small;}
   }
 }
 
 #skills {
   min-height: 80vh;
-  h1{
-    padding:1rem 0;
+  background-image:url('./assets/certificate.svg')
+  h1 {
+    padding: 1rem 0;
     font-size: 38px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-    color:darken($color: $colorTwo, $amount: 1);
+    color: darken($color: $colorTwo, $amount: 1);
   }
+
   article {
     background-color: darken($color: $colorTwo, $amount: 8);
     height: fit-content;
@@ -212,9 +231,11 @@ nav {
 
 #say-Hello {
   margin: 1rem 0;
-  height: 200px;
+  min-height: 200px;
+
   .left-section {
     padding: .5rem 2rem;
+
     .img {
       width: 100%;
       height: 100px;
@@ -222,13 +243,16 @@ nav {
       background-size: contain;
     }
   }
+
   .right-section {
     display: grid;
     place-items: center;
+
     div {
       display: grid;
       place-items: center;
     }
+
     h3 {
       padding: 1.5rem 0;
     }
@@ -240,12 +264,15 @@ nav {
   padding: 1rem 0;
 
   .list {
+    justify-content: center;
     padding: 1.5rem 2rem;
     background-color: $colorTwo;
     border-radius: .5rem;
     margin: 1rem 0;
+
     .experience-card {
       margin: .5rem 0;
+
       h2,
       p {
         padding-left: 1rem;
@@ -253,24 +280,26 @@ nav {
         font-weight: lighter;
         font-size: small;
       }
-      h2{
+
+      h2 {
         font-size: large;
       }
 
       &:not(:last-child) .title {
-        &::after{
+        &::after {
           content: '';
           display: block;
-          background-color: $colorOne;
+          
           position: absolute;
-          top:50%;
-          left:100%;
-          width:100px;
-          height: 2px;
+          top: 50%;
+          left: 100%;
+          width: 100px;
+          border:1px dotted $colorOne;
+
           @media screen and (max-width:450px) {
-            left:0;
-            width:2px;
-            height:200px;
+            left: 0;
+            width: 2px;
+            height: 200px;
           }
         }
       }
@@ -281,7 +310,7 @@ nav {
         border-radius: .8rem;
         background-color: $colorOne;
         font-weight: lighter;
-        width:90%;
+        width: 90%;
         position: relative;
       }
 
@@ -295,21 +324,25 @@ nav {
 }
 
 #portfolio {
-  padding:0 2rem;
+  padding: 0 2rem;
+
   .project-card {
     .card {
       padding: 1.5rem 1rem;
-      margin:0.5rem;
+      margin: 0.5rem;
       border-radius: .3rem;
       background-color: $colorTwo;
-      h2{
+
+      h2 {
         font-weight: lighter;
       }
-      p{
-        padding:1rem 0;
+
+      p {
+        padding: 1rem 0;
         font-weight: lighter;
         font-size: smaller;
       }
+
       .img {
         height: 100%;
         width: 100%;
@@ -318,6 +351,7 @@ nav {
       }
     }
   }
+
   @media screen and (min-width:1200px) {
     margin: 4em 12%;
   }
@@ -325,11 +359,13 @@ nav {
 
 #testimonial {
   margin: 4em 0;
-  padding: 2rem ;
+  padding: 2rem;
   background-color: darken($color: $colorTwo, $amount: 8);
+
   .right {
     padding: 0 2rem;
   }
+
   @media screen and (min-width:1200px) {
     padding: 4em 15%;
   }
@@ -344,10 +380,12 @@ footer {
     display: grid;
     place-items: center;
     padding: 4rem;
-    h2{
-      padding:1rem 1rem;
+
+    h2 {
+      padding: 1rem 1rem;
       font-weight: lighter;
     }
+
     h1 {
       font-weight: bolder;
       font-size: 30px;
@@ -356,5 +394,3 @@ footer {
 }
 
 /*=====  End of footer  ======*/
-
-
