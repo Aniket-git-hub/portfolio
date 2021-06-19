@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <section class="letstryme">
+    <section id="letstryme">
       <h1>let's try me!</h1>
       <nav class="row">
         <ul>
@@ -15,7 +15,7 @@
           </li>
         </ul>
          <section class="xs12 s12 m12 l12 xl12 row center">
-           <a href="mailto:singdharmvir81@gmail.com" class="email"><h2>Just an E-mail away!</h2>
+           <a href="mailto:singdharmvir81@gmail.com" class="email"><h2>An E-mail away!</h2>
            <i class="fas fa-paper-plane fa-2x"></i></a>
          </section>
       </nav>

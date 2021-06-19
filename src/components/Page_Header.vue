@@ -2,7 +2,7 @@
   <nav class="row">
     <h2><span class="primaryColor">L</span>etsbug.com</h2>
 
-    <ul class="row">
+    <ul class="row" >
       <li><a href="#">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#about">About</a></li>
@@ -65,20 +65,15 @@
     </section>
   </header>
 </template>
-
+<style lang="scss" scoped>
+@import "@/scss/_grid.scss";
+</style>
 <script>
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
     
-    return {
-
-    };
   },
-});
+})
 </script>
-
-<style lang="scss" scoped>
-@import "@/scss/_grid.scss";
-</style>

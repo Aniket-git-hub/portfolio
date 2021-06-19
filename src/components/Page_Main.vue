@@ -33,7 +33,7 @@
         :key="skill.title"
       >
         <div class="img-box">
-          <img src="../assets/updateportfolio.svg">
+          <img :src="getImgUrl(skill.img)" class="skill-img">
         </div>
         <h3>{{ skill.title }}</h3>
         <p>{{ skill.description }}</p>
@@ -121,9 +121,9 @@
         :key="project.title"
       >
         <div class="card">
-          <div class="img-box">
-            <img :src="project.img" alt="" srcset="">
-          </div>
+          <!-- <div class="img-box">
+            <img :src="getImgUrl(project.img)" :alt="project.img" srcset="">
+          </div> -->
           <h2>{{ project.title }}</h2>
           <p>{{ project.description }}</p>
         </div>
@@ -143,7 +143,7 @@
       <div>
         <p class="quote">
           "Excellent desing, best communication, fast turnaround of revision. I
-          had a clear vision of what i wanted. Aniket did not just deliver it he
+          had a clear vision of what I wanted. Aniket did not just deliver it he
           also improved upon it substially. Recommended!"
         </p>
         <p>
@@ -163,7 +163,7 @@ export default {
     const experience = [
       {
         duration: "2021 - present",
-        title: "Internshala Student Partner",
+        title: "Internshala Student Partner at Internshala",
         description:
           "Working part time in internshala student program to gain experince in maketing, communication and promotion.",
       },
@@ -178,19 +178,19 @@ export default {
     const skills = [
       {
         title: "Frontend",
-        img:'../assets/server.svg',
+        img:'html.svg',
         description:
           "Some of my frontend skills are HTML, CSS, Javascript, Vue.js, vuetify, etc ",
       },
       {
         title: "Backend",
-        img:'../assets/server.svg',
+        img:'prototype.svg',
         description:
           "Backend skills includes Node.js(with express), Deno, PHP(with larvel) and Django",
       },
       {
         title: "Database",
-        img:'../assets/server.svg',
+        img:'server.svg',
         description:
           "Databases I am good at mongoDB, firestore, mysql, mariaDB, sqlLite",
       },
@@ -199,25 +199,25 @@ export default {
     const projects = [
       {
         title: "Covid19Update",
-        img:'../assets/server.svg',
+        img:'server.svg',
         description:
           "This was my first professional looking project that I made during covid19 pandemic.",
       },
       {
         title: "visualizer",
-         img:'../assets/server.svg',
+         img:'server.svg',
         description:
           "After examProject I will work on this project which helps understaing the working of different algorithms.  ",
       },
       {
         title: "Madhu",
-         img:'../assets/server.svg',
+         img:'server.svg',
         description:
           "This is my first project which is used by a company and helping their business grow.",
       },
       {
         title: "examProject",
-         img:'../assets/server.svg',
+         img:'server.svg',
         description:
           "examProject is the one I am currently working on so, it is still in development. I am using nuxt.js to built it.",
       },
@@ -231,14 +231,14 @@ export default {
           " User ecperience (UX) design is the process design teams use to creat products.",
       },
       {
-        course: "HSC",
-        from: "Intermediate",
+        course: "Intermediate",
+        from: "HSC",
         description:
           " User ecperience (UX) design is the process design teams use to create products.",
       },
       {
-        course: "SSC",
-        from: "State Board",
+        course: "High School",
+        from: "SSC",
         description:
           " User ecperience (UX) design is the process design teams use to create products.",
       },
@@ -250,6 +250,12 @@ export default {
       education,
       experience,
     };
+  },
+  methods:{
+    // this is a comment
+    getImgUrl(pic) {
+    return require('../assets/'+ pic)
+}
   },
 };
 </script>
