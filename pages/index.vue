@@ -1,5 +1,5 @@
 <template>
-	<main class="flex justify-center align-middle h-full">
+	<main class="flex justify-center align-middle h-full text-sm">
 		<section class="mt-28">
 			<article class="text-white">
 				<p class="py-1">Hi all,I am</p>
