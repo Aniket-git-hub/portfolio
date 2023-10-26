@@ -2,7 +2,7 @@
 	<main class="flex justify-center align-middle h-full text-sm">
 		<section class="mt-28">
 			<article class="text-white">
-				<p class="py-1">Hi all,I am</p>
+				<p class="py-1">Hi all, I am</p>
 				<h1 class="text-6xl py-1">Aniket Singh</h1>
 				<h3 class="text-editor-blue text-3xl pt-1">> Web Developer</h3>
 			</article>

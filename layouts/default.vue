@@ -23,10 +23,13 @@
 					</NuxtLink>
 				</li>
 				<li class="flex-1" aria-disabled="true"></li>
-				<li
-					class="py-2 px-6 border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
-				>
-					<NuxtLink to="/contact"> _contact-me </NuxtLink>
+				<li>
+					<NuxtLink
+						class="h-full py-2 px-6 block border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+						to="/contact"
+					>
+						_contact-me
+					</NuxtLink>
 				</li>
 			</ul>
 		</nav>
