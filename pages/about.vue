@@ -24,9 +24,9 @@
 					</button>
 				</div>
 			</section>
-			<!-- <ExperiencesSidebar /> -->
+			<ExperiencesSidebar />
 			<!-- <PersonalInfoSidebar /> -->
-			<HobbiesInfo />
+			<!-- <HobbiesInfo /> -->
 		</section>
 		<Experiences />
 	</section>

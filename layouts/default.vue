@@ -1,9 +1,9 @@
 <template>
 	<section
-		class="main-container border border-border-color mt-6 rounded-lg overflow-hidden bg-editor-bg flex flex-col text-sm"
+		class="main-container border border-border-color overflow-hidden bg-editor-bg flex flex-col text-sm"
 	>
 		<nav
-			class="w-full flex text-editor-text-color border-b border-border-color overflow-hidden"
+			class="flex-none flex text-editor-text-color border-b border-border-color overflow-hidden"
 		>
 			<div
 				class="border-r border-border-color py-2 px-8 w-60 hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
@@ -34,11 +34,11 @@
 			</ul>
 		</nav>
 
-		<section class="flex-1">
+		<section class="flex-1 h-full flex flex-col">
 			<slot></slot>
 		</section>
 		<nav
-			class="w-full flex text-editor-text-color border-t border-border-color"
+			class="flex-none flex text-editor-text-color border-t border-border-color"
 		>
 			<div
 				class="h-full flex items-center border-r border-border-color py-2 px-8 text-sm"
@@ -90,8 +90,8 @@ const navLinks = ref([
 </script>
 <style type="text/css">
 .main-container {
-	width: 95vw;
-	height: 90vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 body {
