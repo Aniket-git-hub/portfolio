@@ -1,9 +1,9 @@
 <template>
 	<section
-		class="main-container border border-border-color overflow-hidden bg-editor-bg flex flex-col text-sm"
+		class="main-container border border-border-color bg-editor-bg flex flex-col text-sm"
 	>
 		<nav
-			class="flex-none flex text-editor-text-color border-b border-border-color overflow-hidden"
+			class="flex-none flex text-editor-text-color border-b border-border-color"
 		>
 			<div
 				class="border-r border-border-color py-2 px-8 w-60 hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
@@ -34,7 +34,7 @@
 			</ul>
 		</nav>
 
-		<section class="flex-1 h-full flex flex-col">
+		<section class="flex-1 overflow-y-auto hide-scrollbar">
 			<slot></slot>
 		</section>
 		<nav
@@ -95,7 +95,8 @@ const navLinks = ref([
 }
 
 body {
-	height: 100vh;
+	min-height: 100vh;
+	max-height: 100vh;
 	background-color: #000d1d;
 	display: grid;
 	place-items: center;
@@ -104,5 +105,15 @@ body {
 .router-link-active {
 	border-bottom: 2px solid #fea55f;
 	font-family: "Fira code retina";
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 </style>

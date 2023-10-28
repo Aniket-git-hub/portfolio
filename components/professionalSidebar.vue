@@ -8,17 +8,32 @@
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				experiences
+				<button
+					class="px-2"
+					@click="$parent.changeContent('Experiences')"
+				>
+					experiences
+				</button>
 			</li>
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				hard-skills
+				<button
+					class="px-2"
+					@click="$parent.changeContent('Experiences')"
+				>
+					hard-skills
+				</button>
 			</li>
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				soft-skills
+				<button
+					class="px-2"
+					@click="$parent.changeContent('Experiences')"
+				>
+					soft-skills
+				</button>
 			</li>
 		</ul>
 		<div class="border-b border-border-color p-2">
@@ -27,11 +42,18 @@
 		</div>
 		<div class="flex px-4 py-2">
 			<Icon name="mdi:email" class="pr-2" size="24px" />
-			<p>me@letsbug.in</p>
+			<a href="mailto:singhdharmvir81@gmail.com">me@letsbug.in</a>
 		</div>
 		<div class="flex px-4 py-2">
 			<Icon name="mdi:phone" class="pr-2" size="24px" />
-			<p>+917559410568</p>
+			<a href="tel:+917559410568">+917559410568</a>
 		</div>
 	</section>
 </template>
+<script>
+export default {
+	mounted() {
+		this.$parent.changeContent("Experiences")
+	},
+}
+</script>

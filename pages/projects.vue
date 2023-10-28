@@ -1,6 +1,6 @@
 <template>
-	<section class="h-full flex text-sm text-white">
-		<section class="border-r border-border-color max-w-60">
+	<section class="h-full flex text-sm text-white hide-scrollbar">
+		<section class="h-full border-r border-border-color w-60">
 			<div class="border-b border-border-color px-4 py-2">
 				<Icon name="mdi:triangle-down" size="8px" /> _technology
 			</div>
@@ -22,7 +22,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="flex-none w-full h-full">
+		<section class="flex-1">
 			<ul class="border-b border-border-color flex">
 				<li
 					class="border-r border-border-color w-fit p-2 px-4"
@@ -35,7 +35,7 @@
 					</button>
 				</li>
 			</ul>
-			<div class="flex pl-10 pt-4 max-h-60">
+			<div class="pl-10 pt-4 flex flex-wrap">
 				<ProjectCard
 					v-for="project in filteredProjects"
 					:key="project.name"
@@ -159,5 +159,15 @@ export default {
 <style>
 .h-90 {
 	max-height: 60%;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 </style>

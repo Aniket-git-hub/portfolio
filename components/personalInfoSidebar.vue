@@ -8,17 +8,29 @@
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				bio
+				<button class="px-2" @click="$parent.changeContent('Bio')">
+					bio
+				</button>
 			</li>
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				interests
+				<button
+					class="px-2"
+					@click="$parent.changeContent('Interests')"
+				>
+					interests
+				</button>
 			</li>
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				education
+				<button
+					class="px-2"
+					@click="$parent.changeContent('Education')"
+				>
+					education
+				</button>
 			</li>
 		</ul>
 		<div class="border-b border-border-color p-2">
@@ -35,3 +47,10 @@
 		</div>
 	</section>
 </template>
+<script>
+export default {
+	mounted() {
+		this.$parent.changeContent("Bio")
+	},
+}
+</script>

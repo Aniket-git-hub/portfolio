@@ -8,12 +8,16 @@
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				sports
+				<button class="px-2" @click="$parent.changeContent('Sports')">
+					sports
+				</button>
 			</li>
 			<li class="py-2">
 				<Icon name="mdi:chevron-down" />
 				<Icon name="flat-color-icons:folder" />
-				favorite-games
+				<button class="px-2" @click="$parent.changeContent('games')">
+					games
+				</button>
 			</li>
 		</ul>
 		<div class="border-b border-border-color p-2">
@@ -30,3 +34,10 @@
 		</div>
 	</section>
 </template>
+<script>
+export default {
+	mounted() {
+		this.$parent.changeContent("Sports")
+	},
+}
+</script>
