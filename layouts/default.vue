@@ -34,7 +34,7 @@
 			</ul>
 		</nav>
 
-		<section class="flex-1 overflow-y-auto hide-scrollbar">
+		<section class="flex-1 overflow-y-auto hide-scrollbar relative">
 			<slot></slot>
 		</section>
 		<nav
