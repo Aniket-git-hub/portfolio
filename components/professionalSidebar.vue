@@ -6,34 +6,46 @@
 		</div>
 		<ul class="border-b border-border-color p-2">
 			<li class="py-2">
-				<Icon name="mdi:chevron-down" />
-				<Icon name="flat-color-icons:folder" />
-				<button
-					class="px-2"
-					@click="$parent.changeContent('Experiences')"
+				<Accordion
+					:title="'experiences'"
+					closedIcon="flat-color-icons:folder"
+					openIcon="flat-color-icons:opened-folder"
 				>
-					experiences
-				</button>
+					<button
+						class="pl-3 p-1"
+						@click="selectedComponent('Experiences')"
+					>
+						experiences.md
+					</button>
+				</Accordion>
 			</li>
 			<li class="py-2">
-				<Icon name="mdi:chevron-down" />
-				<Icon name="flat-color-icons:folder" />
-				<button
-					class="px-2"
-					@click="$parent.changeContent('Experiences')"
+				<Accordion
+					:title="'hard-skills'"
+					closedIcon="flat-color-icons:folder"
+					openIcon="flat-color-icons:opened-folder"
 				>
-					hard-skills
-				</button>
+					<button
+						class="pl-3 p-1"
+						@click="selectedComponent('HardSkills')"
+					>
+						hardSkills.md
+					</button>
+				</Accordion>
 			</li>
 			<li class="py-2">
-				<Icon name="mdi:chevron-down" />
-				<Icon name="flat-color-icons:folder" />
-				<button
-					class="px-2"
-					@click="$parent.changeContent('Experiences')"
+				<Accordion
+					:title="'soft-skills'"
+					closedIcon="flat-color-icons:folder"
+					openIcon="flat-color-icons:opened-folder"
 				>
-					soft-skills
-				</button>
+					<button
+						class="pl-3 p-1"
+						@click="selectedComponent('SoftSkills')"
+					>
+						softSkills.md
+					</button>
+				</Accordion>
 			</li>
 		</ul>
 		<div class="border-b border-border-color p-2">
@@ -52,8 +64,10 @@
 </template>
 <script>
 export default {
-	mounted() {
-		this.$parent.changeContent("Experiences")
+	methods: {
+		selectedComponent(name) {
+			this.$parent.changeContent(name)
+		},
 	},
 }
 </script>

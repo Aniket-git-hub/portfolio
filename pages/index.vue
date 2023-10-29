@@ -29,6 +29,7 @@
 				<img
 					class="rounded-md overflow-hidden border max-h-96 border-gray-950"
 					src="../assets/dashboard.png"
+					alt="32Beads Game"
 				/>
 				<section class="w-1/2 p-4 text-white">
 					<h3 class="text-xl font-semibold">32 Beads Game</h3>
@@ -53,9 +54,9 @@
 useSeoMeta({
 	title: "Aniket singh | letsbug",
 	ogTitle: "Aniket singh | letsbug",
-	description: "This is my amazing site, let me tell you all about it.",
-	ogDescription: "This is my amazing site, let me tell you all about it.",
-	ogImage: "https://example.com/image.png",
+	description: "Hi, I am aniket singh.",
+	ogDescription: "Hi, I am aniket singh.",
+	ogImage: "https://portfolio-5b3g.vercel.app/_nuxt/dashboard.dd0da0a5.png",
 	twitterCard: "summary_large_image",
 })
 </script>
