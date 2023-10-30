@@ -15,7 +15,7 @@
 							v-model="t.selected"
 						/>
 						<Icon :name="t.icon" />
-						<span>
+						<span class="px-2">
 							{{ t.name }}
 						</span>
 					</label>
@@ -37,8 +37,9 @@
 			</ul>
 			<div class="pl-10 pt-4 flex flex-wrap">
 				<ProjectCard
-					v-for="project in filteredProjects"
+					v-for="(project, i) in filteredProjects"
 					:key="project.name"
+					:index="i + 1"
 					:name="project.name"
 					:description="project.description"
 				/>
@@ -104,19 +105,31 @@ export default {
 			],
 			projects: [
 				{
-					name: "Project 1",
-					description: "Description for Project 1",
-					technologies: ["React", "Node.js", "MongoDB"],
+					name: "Portfolio Site",
+					description:
+						"This is my portfolio website that you are currently browsing",
+					technologies: ["Vue", "node.js", "nuxt", "ssr", "vercel"],
 				},
 				{
-					name: "Project 2",
-					description: "Description for Project 2",
-					technologies: ["Vue", "Python", "SQL"],
+					name: "32 Beads Game",
+					description: "This is a online multiplayer board game.",
+					technologies: [
+						"react",
+						"chakraUI",
+						"mongodb",
+						"node.js",
+						"express.js",
+						"vercel",
+						"render",
+						"git",
+						"github",
+					],
 				},
 				{
-					name: "Project 3",
-					description: "Description for Project 2",
-					technologies: ["Java", "Python", "SQL"],
+					name: "Employee Attendance App.",
+					description:
+						"This is android projects that helps small businesses with their attendance record and payments",
+					technologies: ["Java", "android", "sqlite"],
 				},
 				{
 					name: "Project 4",

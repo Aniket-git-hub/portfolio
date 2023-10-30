@@ -86,6 +86,7 @@ const navLinks = ref([
 	{ name: "_hello", to: "/" },
 	{ name: "_about-me", to: "/about" },
 	{ name: "_projects", to: "/projects" },
+	{ name: "_blog", to: "https://blog.letsbug.in" },
 ])
 </script>
 <style type="text/css">

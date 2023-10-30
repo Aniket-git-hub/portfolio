@@ -1,8 +1,8 @@
 <template>
 	<article class="m-8 w-fit">
 		<span class="text-blue-600 font-bold">
-			{{ name }}
-			<span class="text-editor-text-color"> // ui-animation </span></span
+			Project {{ index }}
+			<span class="text-editor-text-color"> // {{ name }} </span></span
 		>
 		<article
 			class="bg-bg-color mt-2 rounded-xl border border-border-color overflow-hidden relative"
@@ -29,6 +29,6 @@
 </template>
 <script>
 export default {
-	props: ["name", "description"],
+	props: ["name", "description", "index"],
 }
 </script>

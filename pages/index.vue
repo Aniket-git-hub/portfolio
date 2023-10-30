@@ -7,7 +7,7 @@
 				<h3 class="text-editor-blue text-3xl pt-1">> Web Developer</h3>
 			</article>
 			<article class="text-editor-text-color mt-16">
-				<p class="py-1">// want to a interesting board game</p>
+				<p class="py-1">// want to play a interesting board game</p>
 				<p class="py-1">// you can see it on my GitHub page</p>
 				<p class="py-1">
 					<span class="text-editor-blue">const </span>
