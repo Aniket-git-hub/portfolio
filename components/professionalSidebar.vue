@@ -64,6 +64,9 @@
 </template>
 <script>
 export default {
+	mounted() {
+		this.$parent.changeContent("ByDefault")
+	},
 	methods: {
 		selectedComponent(name) {
 			this.$parent.changeContent(name)

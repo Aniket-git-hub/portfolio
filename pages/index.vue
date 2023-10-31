@@ -33,11 +33,7 @@
 				/>
 				<section class="w-1/2 p-4 text-white">
 					<h3 class="text-xl font-semibold">32 Beads Game</h3>
-					<p class="mb-5">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Architecto, illum! Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Ut, beatae.
-					</p>
+					<p class="mb-5 mt-2">It's online multiplayer board game.</p>
 					<a
 						class="bg-card-btn p-2 rounded-sm mt-20"
 						href="https://32si.vercel.app/"

@@ -12,4 +12,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/robots.txt', '/about', '/projects', '/contact']
+    }
+  }
 })

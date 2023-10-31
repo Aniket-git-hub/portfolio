@@ -50,6 +50,7 @@
 
 <script>
 import Bio from "../components/bio.vue"
+import ByDefault from "../components/byDefault.vue"
 import Education from "../components/education.vue"
 import Experiences from "../components/experiences.vue"
 import HardSkills from "../components/hardSkills.vue"
@@ -72,6 +73,7 @@ export default {
 		SoftSkills,
 		Interests,
 		Sports,
+		ByDefault,
 	},
 	data() {
 		return {
