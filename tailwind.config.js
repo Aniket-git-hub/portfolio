@@ -21,6 +21,7 @@ export default {
         'editor-blue': '#032fae',
         'card-bg': '#0d213f',
         'card-btn': '#0f315b',
+        'code-pink': '#b66ba4',
       }
     },
   },

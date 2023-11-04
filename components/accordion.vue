@@ -1,7 +1,11 @@
 <template>
-	<div class="px-2">
+	<div class="">
 		<!-- Toggle button -->
-		<div class="flex items-center cursor-pointer" @click="toggleAccordion">
+		<div
+			class="flex items-center cursor-pointer"
+			:class="class"
+			@click="toggleAccordion"
+		>
 			<Icon
 				class="w-4 h-4 transition-transform transform"
 				:class="{ 'rotate-180': isActive }"
@@ -27,6 +31,7 @@ const { title, openIcon, closedIcon } = defineProps([
 	"title",
 	"openIcon",
 	"closedIcon",
+	"class",
 ])
 const toggleAccordion = () => {
 	isActive.value = !isActive.value

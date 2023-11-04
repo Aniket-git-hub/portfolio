@@ -1,25 +1,38 @@
 <template>
-	<section class="h-full flex text-sm text-white hide-scrollbar">
+	<section class="h-full flex text-sm text-editor-text-color hide-scrollbar">
 		<section class="h-full border-r border-border-color w-60">
-			<div class="border-b border-border-color px-4 py-2">
+			<!-- <div class="border-b border-border-color px-4 py-2">
 				<Icon name="mdi:triangle-down" size="8px" /> _technology
-			</div>
+			</div> -->
 			<ul class="w-60">
-				<li class="px-3 py-2" v-for="t in technologies" :key="t.name">
-					<label :for="t.name" class="hover:cursor-pointer">
-						<input
-							:id="t.name"
-							type="checkbox"
-							class="mx-3"
-							name="technology"
-							v-model="t.selected"
-						/>
-						<Icon :name="t.icon" />
-						<span class="px-2">
-							{{ t.name }}
-						</span>
-					</label>
-				</li>
+				<Accordion
+					title="_technology"
+					class="border-b border-border-color px-4 py-2"
+				>
+					<li
+						class="px-3 py-2"
+						v-for="t in technologies"
+						:key="t.name"
+					>
+						<label
+							:for="t.name"
+							class="hover:cursor-pointer hover:text-white"
+							:class="t.selected && 'text-white'"
+						>
+							<input
+								:id="t.name"
+								type="checkbox"
+								class="mx-3"
+								name="technology"
+								v-model="t.selected"
+							/>
+							<Icon :name="t.icon" />
+							<span class="px-2">
+								{{ t.name }}
+							</span>
+						</label>
+					</li>
+				</Accordion>
 			</ul>
 		</section>
 		<section class="flex-1">
@@ -42,6 +55,9 @@
 					:index="i + 1"
 					:name="project.name"
 					:description="project.description"
+					:img="project.img"
+					:sourceCode="project.sourceCode"
+					:projectLink="project.projectLink"
 				/>
 			</div>
 		</section>
@@ -63,33 +79,8 @@ export default {
 					selected: false,
 				},
 				{
-					name: "Node.js",
+					name: "Nodejs",
 					icon: "mdi:nodejs",
-					selected: false,
-				},
-				{
-					name: "CSS",
-					icon: "mdi:language-css3",
-					selected: false,
-				},
-				{
-					name: "Javascript",
-					icon: "mdi:language-javascript",
-					selected: false,
-				},
-				{
-					name: "Python",
-					icon: "mdi:language-python",
-					selected: false,
-				},
-				{
-					name: "Git",
-					icon: "mdi:git",
-					selected: false,
-				},
-				{
-					name: "GitHub",
-					icon: "mdi:github",
 					selected: false,
 				},
 				{
@@ -102,39 +93,89 @@ export default {
 					icon: "tabler:file-type-sql",
 					selected: false,
 				},
+				{
+					name: "Java",
+					icon: "tabler:file-type-sql",
+					selected: false,
+				},
+				{
+					name: "Vercel",
+					icon: "tabler:file-type-sql",
+					selected: false,
+				},
+				{
+					name: "Render",
+					icon: "tabler:file-type-sql",
+					selected: false,
+				},
+				{
+					name: "Firebase",
+					icon: "tabler:file-type-sql",
+					selected: false,
+				},
 			],
 			projects: [
 				{
 					name: "Portfolio Site",
 					description:
 						"This is my portfolio website that you are currently browsing",
-					technologies: ["Vue", "node.js", "nuxt", "ssr", "vercel"],
+					img: "../assets/portfolio.png",
+					technologies: [
+						"Vue",
+						"Nuxt",
+						"SSR",
+						"Vercel",
+						"Javascript",
+					],
+					sourceCode: "https://github.com/Aniket-git-hub/portfolio",
+					projectLink: "aniket.letsbug.in",
 				},
 				{
 					name: "32 Beads Game",
 					description: "This is a online multiplayer board game.",
 					technologies: [
-						"react",
-						"chakraUI",
-						"mongodb",
-						"node.js",
-						"express.js",
-						"vercel",
-						"render",
-						"git",
-						"github",
+						"React",
+						"ChakraUI",
+						"Mongodb",
+						"Nodejs",
+						"Expressjs",
+						"Vercel",
+						"Render",
+						"Git",
+						"Github",
+						"Javascript",
 					],
+					sourceCode: "https://github.com/Aniket-git-hub/32si",
+					projectLink: "32beads.letsbug.in/",
 				},
 				{
 					name: "Employee Attendance App.",
 					description:
 						"This is android projects that helps small businesses with their attendance record and payments",
-					technologies: ["Java", "android", "sqlite"],
+					technologies: ["Java", "Android", "Sqlite"],
+					sourceCode:
+						"https://github.com/aniket-git-hub/social-network",
+					projectLink: "social-network.firebase.app",
 				},
 				{
-					name: "Project 4",
+					name: "Social Network",
 					description: "Description for Project 2",
-					technologies: ["Vue", "Node.js", "mongodb"],
+					sourceCode:
+						"https://github.com/Aniket-git-hub/payrollSystem",
+					projectLink: "social-network.firebase.app",
+					technologies: [
+						"Vue",
+						"Nodejs",
+						"mongodb",
+						"Git",
+						"Expressjs",
+						"Heroku",
+						"Firebase",
+						"Tailwind",
+						"CSS",
+						"HTML",
+						"Javascript",
+					],
 				},
 			],
 		}

@@ -1,29 +1,36 @@
 <template>
-	<section class="h-full flex text-sm text-white">
+	<section class="h-full flex text-sm text-editor-text-color">
 		<section class="border-r border-border-color w-60 flex">
 			<section class="w-full">
-				<div class="border-b border-border-color p-2">
+				<div class="border-b border-border-color hover:text-white p-2">
 					<Icon name="mdi:triangle-down" size="8px" />
 					contacts
 				</div>
 				<a
 					href="mailto:singhdharmvir81@gmail.com"
-					class="flex px-4 py-2"
+					class="flex px-4 py-2 hover:text-white"
 				>
 					<Icon name="mdi:email" class="pr-2" size="24px" />
 					<p>me@letsbug.in</p>
 				</a>
-				<a href="tel:+917559410568" class="flex px-4 py-2">
+				<a
+					href="tel:+917559410568"
+					class="flex px-4 py-2 hover:text-white"
+				>
 					<Icon name="mdi:phone" class="pr-2" size="24px" />
 					<p>+917559410568</p>
 				</a>
-				<div class="border-y border-border-color p-2">
+				<div class="border-y border-border-color p-2 hover:text-white">
 					<Icon name="mdi:triangle-down" size="8px" />
 					find-me-also-in
 				</div>
 				<ul class="p-2">
-					<li class="py-2" v-for="l in externalLinks" :key="l.name">
-						<a :href="l.to">
+					<li
+						class="py-2 hover:text-white"
+						v-for="l in externalLinks"
+						:key="l.name"
+					>
+						<a :href="l.to" target="_blank">
 							<Icon name="mdi:external-link" />
 							{{ l.name }}
 						</a>
@@ -42,15 +49,22 @@
 				</ul>
 				<section class="h-full flex">
 					<article class="flex-1 p-4">
-						<p class="flex">
-							<span class="w-4 mr-4 h-full leading-8"
+						<p class="flex flex-wrap leading-8">
+							<span class="w-4 mr-4 h-full"
 								>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
 							>
 							const button = document.querySelector ( '#sendBtn'
-							); const message = { name : "" , email : "" ,
-							message : "" , date: "Thu Oct 26 2023" }
-							button.addEventListener ( 'click' ), () => {
-							form.send ( message ); })
+							);
+							<br />
+							const message = { <br />
+							&nbsp; &nbsp; name : "" , <br />
+							&nbsp; &nbsp; email : "" , <br />
+							&nbsp; &nbsp; message : "" , <br />
+							&nbsp; &nbsp; date: new Date() <br />
+							} <br />
+							button.addEventListener ( 'click' ), () => { <br />
+							&nbsp; &nbsp; form.send ( message ); <br />
+							})
 						</p>
 					</article>
 					<div
@@ -74,7 +88,9 @@
 							class="bg-card-bg mt-4 w-fit p-8 rounded-md h-fit"
 							@submit.prevent="formSubmitted"
 						>
-							<h3 class="text-lg mb-4">Your Feedback Matters</h3>
+							<h3 class="text-lg mb-4 text-white">
+								Your Feedback Matters
+							</h3>
 							<div class="text-white my-2">
 								<label class="block mb-1">_name:</label>
 								<input
@@ -108,7 +124,7 @@
 							<button
 								:disabled="loading"
 								type="submit"
-								class="px-4 mt-4 py-2 bg-card-btn rounded-md inline-flex items-center"
+								class="px-4 mt-4 py-2 bg-card-btn rounded-md inline-flex items-center text-white"
 							>
 								<svg
 									v-if="loading"
