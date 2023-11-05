@@ -95,22 +95,22 @@ export default {
 				},
 				{
 					name: "Java",
-					icon: "tabler:file-type-sql",
+					icon: "cib:java",
 					selected: false,
 				},
 				{
 					name: "Vercel",
-					icon: "tabler:file-type-sql",
+					icon: "akar-icons:vercel-fill",
 					selected: false,
 				},
 				{
 					name: "Render",
-					icon: "tabler:file-type-sql",
+					icon: "simple-icons:render",
 					selected: false,
 				},
 				{
 					name: "Firebase",
-					icon: "tabler:file-type-sql",
+					icon: "teenyicons:firebase-solid",
 					selected: false,
 				},
 			],

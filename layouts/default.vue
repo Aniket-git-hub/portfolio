@@ -3,21 +3,22 @@
 		class="main-container border border-border-color bg-editor-bg flex flex-col text-sm"
 	>
 		<nav
-			class="flex-none flex text-editor-text-color border-b border-border-color"
+			class="flex-none flex justify-between text-editor-text-color border-b border-border-color"
 		>
 			<div
-				class="border-r border-border-color py-2 px-8 w-60 hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+				class="border-r border-border-color py-2 px-8 w-fit md:w-60 hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 			>
 				<NuxtLink to="/">
 					<h1>aniket-singh</h1>
 				</NuxtLink>
 			</div>
 
-			<ul class="flex items-center w-full flex-1">
+			<ul class="items-center w-full flex-1 hidden md:flex">
 				<li v-for="nav in navLinks" :key="nav.to">
 					<NuxtLink
 						class="h-full py-2 px-6 block border-r border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 						:to="nav.to"
+						:target="nav.blank == true && '_blank'"
 					>
 						{{ nav.name }}
 					</NuxtLink>
@@ -26,6 +27,31 @@
 				<li>
 					<NuxtLink
 						class="h-full py-2 px-6 block border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+						to="/contact"
+					>
+						_contact-me
+					</NuxtLink>
+				</li>
+			</ul>
+			<button class="px-4 md:hidden" @click="isOpen = !isOpen">
+				<Icon
+					:name="isOpen ? 'ic:baseline-close' : 'pajamas:hamburger'"
+				/>
+			</button>
+			<ul class="">
+				<li v-for="nav in navLinks" :key="nav.to">
+					<NuxtLink
+						class="py-2 px-6 block border-r border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+						:to="nav.to"
+						:target="nav.blank == true && '_blank'"
+					>
+						{{ nav.name }}
+					</NuxtLink>
+				</li>
+				<li class="flex-1" aria-disabled="true"></li>
+				<li>
+					<NuxtLink
+						class="py-2 px-6 block border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 						to="/contact"
 					>
 						_contact-me
@@ -86,8 +112,9 @@ const navLinks = ref([
 	{ name: "_hello", to: "/" },
 	{ name: "_about-me", to: "/about" },
 	{ name: "_projects", to: "/projects" },
-	{ name: "_blog", to: "https://blog.letsbug.in" },
+	{ name: "_blog", to: "https://blog.letsbug.in", blank: true },
 ])
+const isOpen = ref(false)
 </script>
 <style type="text/css">
 .main-container {

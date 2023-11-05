@@ -22,7 +22,7 @@
 				</p>
 			</article>
 		</section>
-		<section class="mt-28 pl-20 flex justify-center align-middle">
+		<section class="hidden md:flex mt-28 pl-20 justify-center align-middle">
 			<article
 				class="max-w-md h-fit rounded-lg shadow-sm bg-card-bg flex"
 			>
