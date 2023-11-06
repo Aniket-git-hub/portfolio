@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="main-container border border-border-color bg-editor-bg flex flex-col text-sm"
+		class="main-container border border-border-color bg-editor-bg flex flex-col text-sm relative"
 	>
 		<nav
 			class="flex-none flex justify-between text-editor-text-color border-b border-border-color"
@@ -38,10 +38,15 @@
 					:name="isOpen ? 'ic:baseline-close' : 'pajamas:hamburger'"
 				/>
 			</button>
+		</nav>
+		<nav
+			:class="isOpen === true ? 'flex' : 'hidden'"
+			class="text-white absolute my-10 justify-center w-full z-10 bg-editor-bg pb-5 rounded-lg"
+		>
 			<ul class="">
 				<li v-for="nav in navLinks" :key="nav.to">
 					<NuxtLink
-						class="py-2 px-6 block border-r border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+						class="py-2 px-6 block hover:bg-bg-hover-color hover:cursor-pointer text-center"
 						:to="nav.to"
 						:target="nav.blank == true && '_blank'"
 					>
@@ -51,7 +56,7 @@
 				<li class="flex-1" aria-disabled="true"></li>
 				<li>
 					<NuxtLink
-						class="py-2 px-6 block border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
+						class="py-2 px-6 block hover:bg-bg-hover-color hover:cursor-pointer text-center"
 						to="/contact"
 					>
 						_contact-me
@@ -67,7 +72,7 @@
 			class="flex-none flex text-editor-text-color border-t border-border-color"
 		>
 			<div
-				class="h-full flex items-center border-r border-border-color py-2 px-8 text-sm"
+				class="hidden md:flex h-full items-center border-r border-border-color py-2 px-8 text-sm"
 			>
 				<p>find me in:</p>
 			</div>
@@ -98,7 +103,9 @@
 					class="py-2 px-6 border-l border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 				>
 					<a href="https://github.com/Aniket-git-hub">
-						@aniket-git-hub
+						<span class="pr-2 hidden md:inline-block"
+							>@aniket-git-hub</span
+						>
 						<Icon name="uil:github" />
 					</a>
 				</li>
@@ -107,7 +114,8 @@
 	</section>
 </template>
 <script setup>
-import { ref } from "vue"
+import { ref, watch } from "vue"
+import { useRoute } from "vue-router"
 const navLinks = ref([
 	{ name: "_hello", to: "/" },
 	{ name: "_about-me", to: "/about" },
@@ -115,6 +123,10 @@ const navLinks = ref([
 	{ name: "_blog", to: "https://blog.letsbug.in", blank: true },
 ])
 const isOpen = ref(false)
+const route = useRoute()
+watch(route, () => {
+	isOpen.value = false
+})
 </script>
 <style type="text/css">
 .main-container {
