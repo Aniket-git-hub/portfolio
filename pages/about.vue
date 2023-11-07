@@ -1,6 +1,6 @@
 <template>
 	<section class="h-full flex text-sm text-white">
-		<section class="border-r border-border-color w-60 flex">
+		<section class="border-r border-border-color md:w-60 flex relative">
 			<section class="border-r border-border-color py-4">
 				<div
 					class="p-4 text-border-color hover:cursor-pointer hover:text-white"
@@ -9,7 +9,7 @@
 							? 'text-white'
 							: 'text-border-color'
 					"
-					@click="activeSidebar = 'ExperiencesSidebar'"
+					@click="changeActiveSidebar('ExperiencesSidebar')"
 				>
 					<button>
 						<Icon name="icon-park-solid:terminal" />
@@ -22,7 +22,7 @@
 							? 'text-white'
 							: 'text-border-color'
 					"
-					@click="activeSidebar = 'PersonalInfoSidebar'"
+					@click="changeActiveSidebar('PersonalInfoSidebar')"
 				>
 					<button>
 						<Icon name="icon-park-solid:personal-collection" />
@@ -35,14 +35,29 @@
 							? 'text-white'
 							: 'text-border-color'
 					"
-					@click="activeSidebar = 'HobbiesInfo'"
+					@click="changeActiveSidebar('HobbiesInfo')"
 				>
 					<button>
 						<Icon name="icon-park-solid:game-ps" />
 					</button>
 				</div>
 			</section>
-			<Component :is="activeSidebar" />
+			<Component :is="activeSidebar" class="hidden md:block" />
+			<section
+				:class="openSidebar ? 'block' : 'hidden'"
+				class="absolute z-50 bg-editor-bg h-full pb-5 border-r border-b border-border-color flex-col"
+			>
+				<section class="w-full flex justify-center">
+					<button
+						class="p-2 px-4 bg-card-bg m-3"
+						@click="openSidebar = false"
+					>
+						Back
+						<Icon name="mdi:arrow-left" />
+					</button>
+				</section>
+				<Component :is="activeSidebar" />
+			</section>
 		</section>
 		<Component :is="activeContent" />
 	</section>
@@ -79,11 +94,17 @@ export default {
 		return {
 			activeSidebar: "ExperiencesSidebar",
 			activeContent: "PersonalInfo",
+			openSidebar: false,
 		}
 	},
 	methods: {
 		changeContent(content) {
 			this.activeContent = content
+			this.openSidebar = false
+		},
+		changeActiveSidebar(activeSidebar) {
+			this.activeSidebar = activeSidebar
+			this.openSidebar = true
 		},
 	},
 }

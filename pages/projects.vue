@@ -1,6 +1,10 @@
 <template>
-	<section class="h-full flex text-sm text-editor-text-color hide-scrollbar">
-		<section class="h-full border-r border-border-color w-60">
+	<section
+		class="h-full flex text-sm text-editor-text-color hide-scrollbar relative"
+	>
+		<section
+			class="h-full border-r border-border-color w-60 hidden md:block"
+		>
 			<!-- <div class="border-b border-border-color px-4 py-2">
 				<Icon name="mdi:triangle-down" size="8px" /> _technology
 			</div> -->
@@ -35,8 +39,50 @@
 				</Accordion>
 			</ul>
 		</section>
+		<section
+			class="h-full border-r border-border-color bg-editor-bg absolute z-30"
+			:class="openSidebar === true ? 'block' : 'hidden'"
+		>
+			<section class="w-full flex justify-center">
+				<button
+					class="p-2 px-4 bg-card-bg m-3 text-white"
+					@click="openSidebar = false"
+				>
+					Back
+					<Icon name="mdi:arrow-left" />
+				</button>
+			</section>
+			<ul class="w-60 border-t border-border-color">
+				<li class="px-3 py-2" v-for="t in technologies" :key="t.name">
+					<label
+						:for="t.name"
+						class="hover:cursor-pointer hover:text-white"
+						:class="t.selected && 'text-white'"
+					>
+						<input
+							:id="t.name"
+							type="checkbox"
+							class="mx-3"
+							name="technology"
+							v-model="t.selected"
+						/>
+						<Icon :name="t.icon" />
+						<span class="px-2">
+							{{ t.name }}
+						</span>
+					</label>
+				</li>
+			</ul>
+		</section>
 		<section class="flex-1">
 			<ul class="border-b border-border-color flex">
+				<li
+					class="border-r border-border-color hover:text-white w-fit p-2 px-4 md:hidden"
+				>
+					<button @click="openSidebar = true">
+						<Icon name="mdi:filter" size="18px" />
+					</button>
+				</li>
 				<li
 					class="border-r border-border-color w-fit p-2 px-4"
 					v-for="t in selectedTechnologies"
@@ -64,9 +110,11 @@
 	</section>
 </template>
 <script>
+const images = import.meta.globEager("../assets/*.png")
 export default {
 	data() {
 		return {
+			openSidebar: false,
 			technologies: [
 				{
 					name: "React",
@@ -119,7 +167,7 @@ export default {
 					name: "Portfolio Site",
 					description:
 						"This is my portfolio website that you are currently browsing",
-					img: "../assets/portfolio.png",
+					img: images["../assets/portfolio.png"].default,
 					technologies: [
 						"Vue",
 						"Nuxt",
@@ -133,6 +181,7 @@ export default {
 				{
 					name: "32 Beads Game",
 					description: "This is a online multiplayer board game.",
+					img: images["../assets/dashboard_1.png"].default,
 					technologies: [
 						"React",
 						"ChakraUI",
@@ -150,6 +199,7 @@ export default {
 				},
 				{
 					name: "Employee Attendance App.",
+					img: images["../assets/payroll-1.png"].default,
 					description:
 						"This is android projects that helps small businesses with their attendance record and payments",
 					technologies: ["Java", "Android", "Sqlite"],
@@ -160,6 +210,7 @@ export default {
 				{
 					name: "Social Network",
 					description: "Description for Project 2",
+					img: images["../assets/dashboard.png"].default,
 					sourceCode:
 						"https://github.com/Aniket-git-hub/payrollSystem",
 					projectLink: "social-network.firebase.app",

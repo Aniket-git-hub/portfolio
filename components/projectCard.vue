@@ -14,17 +14,17 @@
 			>
 				<Icon name="devicon:github" />
 			</a>
-			<img class="w-80 h-40" :src="img" />
+			<img class="w-80 h-40 object-cover" :src="img" />
 			<section class="w-80 p-4">
-				<p>
+				<p class="text-white">
 					{{ description }}
+					lorem23
 				</p>
-				<a
-					:href="projectLink"
-					class="bg-card-btn mt-4 px-4 py-2 rounded-lg"
-				>
-					view-project
-				</a>
+				<button class="mt-2 bg-card-btn px-4 py-2 rounded-lg">
+					<a :href="projectLink" class="text-white" target="_blank">
+						view-project
+					</a>
+				</button>
 			</section>
 		</article>
 	</article>

@@ -1,6 +1,6 @@
 <template>
 	<section class="flex-1 flex overflow-hidden">
-		<section class="w-1/2 border-r border-border-color">
+		<section class="w-1/2 border-r border-border-color hidden md:block">
 			<ul class="border-b border-border-color">
 				<li class="border-r border-border-color w-fit p-2 px-4">
 					<Icon name="mdi:markdown" size="18px" />
@@ -51,7 +51,7 @@
 				</div>
 			</section>
 		</section>
-		<section class="w-1/2">
+		<section class="w-full md:w-1/2">
 			<ul class="border-b border-border-color">
 				<li class="border-r border-border-color w-fit p-2 px-4">
 					<Icon name="mdi:markdown" size="18px" />

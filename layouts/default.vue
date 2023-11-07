@@ -9,7 +9,7 @@
 				class="border-r border-border-color py-2 px-8 w-fit md:w-60 hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 			>
 				<NuxtLink to="/">
-					<h1>aniket-singh</h1>
+					<h1 class="text-white">aniket-singh</h1>
 				</NuxtLink>
 			</div>
 
@@ -41,7 +41,7 @@
 		</nav>
 		<nav
 			:class="isOpen === true ? 'flex' : 'hidden'"
-			class="text-white absolute my-10 justify-center w-full z-10 bg-editor-bg pb-5 rounded-lg"
+			class="text-white absolute my-9 justify-center w-full z-10 bg-editor-bg py-2 border border-border-color"
 		>
 			<ul class="">
 				<li v-for="nav in navLinks" :key="nav.to">

@@ -35,9 +35,5 @@
 	</section>
 </template>
 <script>
-export default {
-	mounted() {
-		this.$parent.changeContent("Sports")
-	},
-}
+export default {}
 </script>

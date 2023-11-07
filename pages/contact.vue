@@ -1,8 +1,10 @@
 <template>
 	<section class="h-full flex text-sm text-editor-text-color">
-		<section class="border-r border-border-color w-60 flex">
+		<section class="border-r border-border-color md:w-60 flex">
 			<section class="w-full">
-				<div class="border-b border-border-color hover:text-white p-2">
+				<div
+					class="border-b border-border-color hover:text-white p-2 hidden md:block"
+				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					contacts
 				</div>
@@ -11,35 +13,42 @@
 					class="flex px-4 py-2 hover:text-white"
 				>
 					<Icon name="mdi:email" class="pr-2" size="24px" />
-					<p>me@letsbug.in</p>
+					<p class="hidden md:block">me@letsbug.in</p>
 				</a>
 				<a
 					href="tel:+917559410568"
 					class="flex px-4 py-2 hover:text-white"
 				>
 					<Icon name="mdi:phone" class="pr-2" size="24px" />
-					<p>+917559410568</p>
+					<p class="hidden md:block">+917559410568</p>
 				</a>
-				<div class="border-y border-border-color p-2 hover:text-white">
+				<div
+					class="border-y border-border-color p-2 hover:text-white hidden md:block"
+				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					find-me-also-in
 				</div>
-				<ul class="p-2">
+				<div
+					class="w-full border-b border-border-color md:hidden"
+				></div>
+				<ul class="py-2">
 					<li
 						class="py-2 hover:text-white"
 						v-for="l in externalLinks"
 						:key="l.name"
 					>
-						<a :href="l.to" target="_blank">
-							<Icon name="mdi:external-link" />
-							{{ l.name }}
+						<a :href="l.to" target="_blank" class="px-4 py-2">
+							<Icon :name="l.icon" />
+							<span class="px-2 hidden md:inline-block">
+								{{ l.name }}
+							</span>
 						</a>
 					</li>
 				</ul>
 			</section>
 		</section>
 		<section class="flex-1 flex overflow-hidden">
-			<section class="w-1/2 border-r border-border-color">
+			<section class="w-1/2 border-r border-border-color hidden md:block">
 				<ul class="border-b border-border-color">
 					<li class="border-r border-border-color w-fit p-2 px-4">
 						<Icon name="mdi:vuejs" size="18px" />
@@ -49,8 +58,8 @@
 				</ul>
 				<section class="h-full flex">
 					<article class="flex-1 p-4">
-						<p class="flex flex-wrap leading-8">
-							<span class="w-4 mr-4 h-full"
+						<p class="flex flex-wrap leading-8 text-white">
+							<span class="w-4 mr-4 h-full text-editor-text-color"
 								>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
 							>
 							const button = document.querySelector ( '#sendBtn'
@@ -74,7 +83,7 @@
 					</div>
 				</section>
 			</section>
-			<section class="w-1/2">
+			<section class="w-full md:w-1/2">
 				<ul class="border-b border-border-color">
 					<li class="border-r border-border-color w-fit p-2 px-4">
 						<Icon name="mdi:internet" size="18px" />
@@ -125,6 +134,7 @@
 								:disabled="loading"
 								type="submit"
 								class="px-4 mt-4 py-2 bg-card-btn rounded-md inline-flex items-center text-white"
+								:class="loading && 'hover:cursor-not-allowed'"
 							>
 								<svg
 									v-if="loading"
@@ -190,14 +200,17 @@ export default {
 				{
 					name: "YouTube Channel",
 					to: "https://www.youtube.com/@_letsBug",
+					icon: "basil:youtube-solid",
 				},
 				{
 					name: "HackerRank",
 					to: "https://www.hackerrank.com/profile/singhdharmvir81",
+					icon: "cib:hackerrank",
 				},
 				{
 					name: "LeetCode",
 					to: "https://leetcode.com/Aniket-git-hub/",
+					icon: "simple-icons:leetcode",
 				},
 			],
 			name: "",

@@ -48,9 +48,5 @@
 	</section>
 </template>
 <script>
-export default {
-	mounted() {
-		this.$parent.changeContent("Bio")
-	},
-}
+export default {}
 </script>
