@@ -92,9 +92,9 @@
 					</li>
 				</ul>
 				<section class="h-full flex">
-					<article class="flex-1 p-4 flex justify-center">
+					<article class="flex-1 md:p-4 flex justify-center">
 						<form
-							class="bg-card-bg mt-4 w-fit p-8 rounded-md h-fit"
+							class="bg-card-bg mt-4 w-fit p-4 md:p-8 rounded-md h-fit"
 							@submit.prevent="formSubmitted"
 						>
 							<h3 class="text-lg mb-4 text-white">

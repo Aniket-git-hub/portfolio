@@ -1,6 +1,6 @@
 <template>
 	<main class="flex justify-center align-middle h-full text-sm">
-		<section class="mt-28">
+		<section class="mt-28 pl-6">
 			<article class="text-white">
 				<p class="py-1 text-white">Hi all, I am</p>
 				<h1 class="text-6xl py-1 text-white">Aniket Singh</h1>

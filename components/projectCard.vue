@@ -1,5 +1,5 @@
 <template>
-	<article class="m-8 w-fit">
+	<article class="m-6 md:m-8 w-fit">
 		<span class="text-blue-600 font-bold">
 			Project {{ index }}
 			<span class="text-editor-text-color"> // {{ name }} </span></span

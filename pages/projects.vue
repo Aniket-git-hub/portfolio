@@ -94,7 +94,7 @@
 					</button>
 				</li>
 			</ul>
-			<div class="pl-10 pt-4 flex flex-wrap">
+			<div class="md:pl-10 pt-4 flex flex-wrap">
 				<ProjectCard
 					v-for="(project, i) in filteredProjects"
 					:key="project.name"
