@@ -21,7 +21,12 @@
 					lorem23
 				</p>
 				<button class="mt-2 bg-card-btn px-4 py-2 rounded-lg">
-					<a :href="projectLink" class="text-white" target="_blank">
+					<a
+						:href="projectLink"
+						class="text-white"
+						target="_blank"
+						rel="nofollow"
+					>
 						view-project
 					</a>
 				</button>
