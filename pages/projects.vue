@@ -176,7 +176,7 @@ export default {
 						"Javascript",
 					],
 					sourceCode: "https://github.com/Aniket-git-hub/portfolio",
-					projectLink: "aniket.letsbug.in",
+					projectLink: "https://aniket.letsbug.in",
 				},
 				{
 					name: "32 Beads Game",
@@ -195,7 +195,7 @@ export default {
 						"Javascript",
 					],
 					sourceCode: "https://github.com/Aniket-git-hub/32si",
-					projectLink: "32beads.letsbug.in/",
+					projectLink: "https://32beads.letsbug.in/",
 				},
 				{
 					name: "Employee Attendance App.",
@@ -205,7 +205,8 @@ export default {
 					technologies: ["Java", "Android", "Sqlite"],
 					sourceCode:
 						"https://github.com/aniket-git-hub/social-network",
-					projectLink: "social-network.firebase.app",
+					projectLink:
+						"https://github.com/aniket-git-hub/social-network",
 				},
 				{
 					name: "Social Network",

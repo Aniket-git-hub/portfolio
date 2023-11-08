@@ -17,5 +17,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/sitemap.xml', '/robots.txt', '/about', '/projects', '/contact']
     }
+  },
+  site: {
+    url: 'https://aniket.letsbug.in/'
   }
 })
