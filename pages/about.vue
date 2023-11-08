@@ -104,7 +104,9 @@ export default {
 		},
 		changeActiveSidebar(activeSidebar) {
 			this.activeSidebar = activeSidebar
-			this.openSidebar = true
+			if (window.innerWidth < 768) {
+				this.openSidebar = true
+			}
 		},
 	},
 }
