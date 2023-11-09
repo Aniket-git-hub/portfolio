@@ -53,7 +53,7 @@ useSeoMeta({
 	ogTitle: "Aniket singh | letsbug",
 	description: "Hi, I am aniket singh.",
 	ogDescription: "Hi, I am aniket singh.",
-	ogImage: "https://portfolio-5b3g.vercel.app/_nuxt/dashboard.dd0da0a5.png",
+	ogImage: "https://portfolio-5b3g.vercel.app/_nuxt/portfolio.1dd383b9.png",
 	twitterCard: "summary_large_image",
 })
 </script>
