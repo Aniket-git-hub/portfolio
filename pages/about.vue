@@ -90,6 +90,19 @@ export default {
 		Sports,
 		ByDefault,
 	},
+	head() {
+		return {
+			title: "About Aniket | letsbug",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"know about aniket's education, experiences, skills and more...",
+				},
+			],
+		}
+	},
 	data() {
 		return {
 			activeSidebar: "ExperiencesSidebar",

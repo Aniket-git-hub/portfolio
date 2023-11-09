@@ -18,7 +18,6 @@
 			<section class="w-80 p-4">
 				<p class="text-white">
 					{{ description }}
-					lorem23
 				</p>
 				<button class="mt-2 bg-card-btn px-4 py-2 rounded-lg">
 					<a

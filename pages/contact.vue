@@ -58,7 +58,7 @@
 				</ul>
 				<section class="h-full flex">
 					<article class="flex-1 p-4">
-						<p class="flex flex-wrap leading-8 text-white">
+						<p class="flex leading-8 text-white">
 							<span class="w-4 mr-4 h-full text-editor-text-color"
 								>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
 							>
@@ -194,6 +194,18 @@
 </template>
 <script>
 export default {
+	head() {
+		return {
+			title: "Contact me | letsbug",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: "Let's see how you can connect with me",
+				},
+			],
+		}
+	},
 	data() {
 		return {
 			externalLinks: [

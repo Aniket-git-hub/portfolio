@@ -36,7 +36,8 @@
 					<p class="mb-5 mt-2">It's online multiplayer board game.</p>
 					<a
 						class="bg-card-btn p-2 rounded-sm mt-20"
-						href="https://32si.vercel.app/"
+						href="https://aniket-git-hub.github.io/32si/"
+						target="_blank"
 					>
 						Play Game
 					</a>

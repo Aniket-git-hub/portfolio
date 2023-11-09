@@ -10,19 +10,12 @@
 			</ul>
 			<section class="h-full flex">
 				<article class="flex-1 p-4">
-					<p class="flex">
-						<span class="w-4 mr-4 h-full leading-8"
+					<p class="flex leading-8">
+						<span class="w-4 mr-4 h-full"
 							>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
 						>
 
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Et recusandae sequi excepturi omnis inventore
-						provident quos tempore corrupti nostrum quibusdam. Minus
-						est possimus dolorum quia cupiditate culpa ipsa nulla
-						voluptatem ipsum itaque accusantium debitis voluptatibus
-						impedit ab ex, incidunt id veritatis corrupti explicabo,
-						dignissimos consequuntur aliquam quos nisi voluptates?
-						Quod.
+						I like cricket.
 					</p>
 				</article>
 				<div
@@ -42,19 +35,12 @@
 			</ul>
 			<section class="h-full flex">
 				<article class="flex-1 p-4">
-					<p class="flex">
-						<span class="w-4 mr-4 h-full leading-8"
+					<p class="flex leading-8">
+						<span class="w-4 mr-4 h-full"
 							>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
 						>
 
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Et recusandae sequi excepturi omnis inventore
-						provident quos tempore corrupti nostrum quibusdam. Minus
-						est possimus dolorum quia cupiditate culpa ipsa nulla
-						voluptatem ipsum itaque accusantium debitis voluptatibus
-						impedit ab ex, incidunt id veritatis corrupti explicabo,
-						dignissimos consequuntur aliquam quos nisi voluptates?
-						Quod.
+						I like cricket.
 					</p>
 				</article>
 				<div

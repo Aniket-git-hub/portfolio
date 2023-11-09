@@ -7,10 +7,12 @@
 					<Icon name="mdi:close" size="18px" />
 				</li>
 			</ul>
-			<section class="h-full flex">
-				<article class="flex-1 p-4 flex flex-wrap">
+			<section class="h-full flex pb-4">
+				<article
+					class="flex-1 p-4 flex flex-wrap overflow-auto hide-scrollbar mb-4"
+				>
 					<div
-						class="w-fit h-fit bg-card-bg p-4 m-4 rounded-lg border border-border-color flex justify-center items-center"
+						class="w-fit h-fit bg-card-bg p-2 md:p-4 m-2 md:m-4 rounded-lg border border-border-color flex justify-center items-center"
 						v-for="s in skills"
 						:key="s.name"
 					>

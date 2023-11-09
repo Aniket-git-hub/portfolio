@@ -9,11 +9,12 @@
 				</li>
 			</ul>
 			<section class="h-full flex">
-				<article class="flex-1 p-4">
+				<article class="flex-1 p-4 overflow-auto hide-scrollbar">
 					<p class="flex mr-4 h-full leading-8">
-						<span class="w-4 pr-4 mr-6"
+						<span class="w-4 h-auto pr-8"
 							>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
-						</span>
+							21 22 23 24 25 26 27 28 29 30 31 32</span
+						>
 						# Interests <br />
 
 						## Hobbies <br />
@@ -62,7 +63,7 @@
 				</li>
 			</ul>
 			<section class="h-full flex">
-				<article class="flex-1 p-4">
+				<article class="flex-1 p-4 overflow-auto hide-scrollbar mb-3">
 					<h1
 						class="text-2xl font-semibold border-b border-gray-600 pb-2"
 					>

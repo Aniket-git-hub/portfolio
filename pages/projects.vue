@@ -53,6 +53,7 @@
 				</button>
 			</section>
 			<ul class="w-60 border-t border-border-color">
+				<h3 class="py-2 px-6 text-md">_technology</h3>
 				<li class="px-3 py-2" v-for="t in technologies" :key="t.name">
 					<label
 						:for="t.name"
@@ -112,6 +113,19 @@
 <script>
 const images = import.meta.globEager("../assets/*.png")
 export default {
+	head() {
+		return {
+			title: "Aniket's Project | letsbug",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"Get to know the projects that I have built over the years...",
+				},
+			],
+		}
+	},
 	data() {
 		return {
 			openSidebar: false,
@@ -185,7 +199,7 @@ export default {
 					technologies: [
 						"React",
 						"ChakraUI",
-						"Mongodb",
+						"MongoDB",
 						"Nodejs",
 						"Expressjs",
 						"Vercel",
@@ -204,21 +218,23 @@ export default {
 						"This is android projects that helps small businesses with their attendance record and payments",
 					technologies: ["Java", "Android", "Sqlite"],
 					sourceCode:
-						"https://github.com/aniket-git-hub/social-network",
+						"https://github.com/Aniket-git-hub/payrollSystem",
 					projectLink:
-						"https://github.com/aniket-git-hub/social-network",
+						"https://github.com/Aniket-git-hub/payrollSystem",
+					technologies: ["SQL", "Sqlite", "Android", "Java"],
 				},
 				{
 					name: "Social Network",
-					description: "Description for Project 2",
+					description: "Social networking web application",
 					img: images["../assets/dashboard.png"].default,
+					projectLink:
+						"https://github.com/Aniket-git-hub/socialNetwork",
 					sourceCode:
-						"https://github.com/Aniket-git-hub/payrollSystem",
-					projectLink: "social-network.firebase.app",
+						"https://github.com/Aniket-git-hub/socialNetwork",
 					technologies: [
 						"Vue",
 						"Nodejs",
-						"mongodb",
+						"MongoDB",
 						"Git",
 						"Expressjs",
 						"Heroku",
@@ -265,15 +281,5 @@ export default {
 <style>
 .h-90 {
 	max-height: 60%;
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hide-scrollbar::-webkit-scrollbar {
-	display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.hide-scrollbar {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
 }
 </style>
