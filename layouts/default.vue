@@ -94,7 +94,7 @@
 				<li
 					class="py-2 px-6 border-r border-border-color hover:text-white hover:bg-bg-hover-color hover:cursor-pointer"
 				>
-					<a href="https://instagram.com/aniketsingh6967/">
+					<a href="https://instagram.com/aniket_letsbug/">
 						<Icon name="uil:instagram" />
 					</a>
 				</li>
