@@ -17,24 +17,21 @@
 							36</span
 						>
 
-						I am a recent graduate with a strong passion for
-						technology and a keen interest in web development and
-						fullstack projects. While I may not have formal
-						professional experience, I have spent over five years
-						honing my skills in various aspects of technology,
-						including web development, programming, and software
-						engineering. One of my notable achievements is the
-						development of an Android application in Java and
-						SQLite. This application assists small businesses in
-						managing worker attendance and calculating wages. This
-						project showcases my proficiency in mobile app
-						development and database management. In addition to
-						hands-on projects, I have actively engaged in online
-						courses and tutorials, staying up-to-date with the
-						latest technologies and trends in the tech industry. My
-						dedication to continuous learning and my adaptability to
-						new technologies equip me to thrive in this dynamic
-						field.
+						Backend Developer (Freelance), SFS Academy December 2023
+						- April 2024 <br />
+						• Enhanced platform security by 30% by developing a
+						secure authentication system with multi- factor
+						authentication. <br />
+						• Improved user accessibility by implementing student
+						login and registration processes. <br />
+						• Facilitated learning by creating a content management
+						system for viewing lecture videos and notes. <br />
+						• Streamlined operations by developing an admin
+						interface and appointment booking system integrated with
+						calendar functionalities. <br />
+						• Managed high user engagement by handling over 1,000
+						student registrations and 500 appointments within the
+						first quarter.
 					</p>
 				</article>
 				<div

@@ -212,7 +212,7 @@ export default {
 					projectLink: "https://32beads.letsbug.in/",
 				},
 				{
-					name: "Employee Attendance App.",
+					name: "ERP Project",
 					img: images["../assets/payroll-1.png"].default,
 					description:
 						"This is android projects that helps small businesses with their attendance record and payments",

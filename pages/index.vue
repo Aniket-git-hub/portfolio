@@ -4,7 +4,19 @@
 			<article class="text-white">
 				<p class="py-1 text-white">Hi all, I am</p>
 				<h1 class="text-6xl py-1 text-white">Aniket Singh</h1>
-				<h3 class="text-editor-blue text-3xl pt-1">> Web Developer</h3>
+				<h3 class="text-editor-blue text-3xl pt-1">> Web Dev</h3>
+				<a
+					class="px-4 py-2 m-1 mt-3 bg-blue-500 block w-fit hover:cursor-pointer"
+					href="https://drive.google.com/file/d/1FFiJL54IfZM3ndIVAo6U8jbgt3QyyC2M/view"
+					download
+					>Download Resume</a
+				>
+				<!-- <a
+					class="px-4 py-2 m-1 mt-3 bg-blue-500 block w-fit hover:cursor-pointer"
+					href="../assets/file/AniketSinghResume.pdf"
+					download
+					>Download Resume</a
+				> -->
 			</article>
 			<article class="text-editor-text-color mt-16">
 				<p class="py-1">// want to play a interesting board game</p>
@@ -16,6 +28,7 @@
 					<a
 						href="https://github.com/aniket-git-hub/"
 						class="underline text-quote-text-color"
+						target="_blank"
 					>
 						"https//github.com/aniket-git-hub"
 					</a>
