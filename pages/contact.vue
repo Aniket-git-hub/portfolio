@@ -3,7 +3,7 @@
 		<section class="border-r border-border-color md:w-60 flex">
 			<section class="w-full">
 				<div
-					class="border-b border-border-color hover:text-white p-2 hidden md:block"
+					class="border-b border-border-color text-white p-2 hidden md:block"
 				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					contacts
@@ -23,7 +23,7 @@
 					<p class="hidden md:block">+917559410568</p>
 				</a>
 				<div
-					class="border-y border-border-color p-2 hover:text-white hidden md:block"
+					class="border-y border-border-color p-2 text-white hidden md:block"
 				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					find-me-also-in

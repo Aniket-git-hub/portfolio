@@ -62,10 +62,13 @@
 
 <script setup lang="ts">
 useSeoMeta({
-	title: "Aniket singh | letsbug",
-	ogTitle: "Aniket singh | letsbug",
-	description: "Hi, I am aniket singh.",
-	ogDescription: "Hi, I am aniket singh.",
+	title: "Aniket Singh - Aspiring Full-Stack Developer | PHP, Node.js, Java, JavaScript, Python",
+	ogTitle:
+		"Aniket Singh - Aspiring Full-Stack Developer | PHP, Node.js, Java, JavaScript, Python",
+	description:
+		"Welcome to the portfolio of Aniket Singh, an aspiring Full-Stack Developer with expertise in PHP, Node.js, Java, JavaScript, and Python. Explore my projects, skills, and experiences in web development, including e-commerce platforms, real-time chat applications, and more. Passionate about building innovative web solutions and eager to contribute to dynamic teams. Connect with me to collaborate on your next tech project.",
+	ogDescription:
+		"Welcome to the portfolio of Aniket Singh, an aspiring Full-Stack Developer with expertise in PHP, Node.js, Java, JavaScript, and Python. Explore my projects, skills, and experiences in web development, including e-commerce platforms, real-time chat applications, and more. Passionate about building innovative web solutions and eager to contribute to dynamic teams. Connect with me to collaborate on your next tech project.",
 	ogImage: "https://portfolio-5b3g.vercel.app/_nuxt/portfolio.1dd383b9.png",
 	twitterCard: "summary_large_image",
 })
