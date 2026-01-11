@@ -1,11 +1,11 @@
 <template>
 	<main
-		class="flex flex-col md:flex-row justify-start md:justify-between md:items-start items-start h-full text-sm overflow-y-auto hide-scrollbar pt-8 md:pt-0 px-4 md:px-8 gap-8"
+		class="flex flex-col md:flex-row justify-start md:justify-center md:items-start items-start h-full text-sm overflow-y-auto hide-scrollbar pt-8 md:pt-0 px-4 md:px-6 lg:px-12 xl:px-16 gap-4 md:gap-6 lg:gap-8"
 		itemscope
 		itemtype="https://schema.org/Person"
 	>
 		<section
-			class="mt-4 md:mt-28 px-4 md:pl-6 animate-fade-in max-w-2xl pb-8 flex-shrink-0 md:flex-1 w-full"
+			class="mt-4 md:mt-28 px-4 md:px-0 animate-fade-in max-w-2xl pb-8 flex-shrink-0 md:flex-1 w-full"
 		>
 			<article class="text-light-text dark:text-dark-text">
 				<p
