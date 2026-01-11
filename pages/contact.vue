@@ -1,44 +1,44 @@
 <template>
-	<section class="h-full flex text-sm text-editor-text-color">
-		<section class="border-r border-border-color md:w-60 flex">
+	<section class="h-full flex text-sm text-light-text dark:text-dark-text">
+		<section class="border-r-4 border-light-border dark:border-dark-border md:w-60 flex bg-light-surface dark:bg-dark-surface transition-colors duration-300">
 			<section class="w-full">
 				<div
-					class="border-b border-border-color text-white p-2 hidden md:block"
+					class="border-b-4 border-light-border dark:border-dark-border text-light-text dark:text-dark-text p-2 hidden md:block font-black"
 				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					contacts
 				</div>
 				<a
 					href="mailto:singhdharmvir81@gmail.com"
-					class="flex px-4 py-2 hover:text-white"
+					class="flex px-4 py-2 hover:bg-light-hover dark:hover:bg-dark-hover transition-all duration-200 font-semibold"
 				>
 					<Icon name="mdi:email" class="pr-2" size="24px" />
 					<p class="hidden md:block">me@letsbug.in</p>
 				</a>
 				<a
 					href="tel:+917559410568"
-					class="flex px-4 py-2 hover:text-white"
+					class="flex px-4 py-2 hover:bg-light-hover dark:hover:bg-dark-hover transition-all duration-200 font-semibold"
 				>
 					<Icon name="mdi:phone" class="pr-2" size="24px" />
 					<p class="hidden md:block">+917559410568</p>
 				</a>
 				<div
-					class="border-y border-border-color p-2 text-white hidden md:block"
+					class="border-y-4 border-light-border dark:border-dark-border p-2 text-light-text dark:text-dark-text hidden md:block font-black"
 				>
 					<Icon name="mdi:triangle-down" size="8px" />
 					find-me-also-in
 				</div>
 				<div
-					class="w-full border-b border-border-color md:hidden"
+					class="w-full border-b-4 border-light-border dark:border-dark-border md:hidden"
 				></div>
 				<ul class="py-2">
 					<li
-						class="py-2 hover:text-white"
+						class="py-2 hover:bg-light-hover dark:hover:bg-dark-hover transition-all duration-200"
 						v-for="l in externalLinks"
 						:key="l.name"
 					>
-						<a :href="l.to" target="_blank" class="px-4 py-2">
-							<Icon :name="l.icon" />
+						<a :href="l.to" target="_blank" class="px-4 py-2 flex items-center font-semibold">
+							<Icon :name="l.icon" size="20px" />
 							<span class="px-2 hidden md:inline-block">
 								{{ l.name }}
 							</span>
@@ -48,44 +48,16 @@
 			</section>
 		</section>
 		<section class="flex-1 flex overflow-hidden">
-			<section class="w-1/2 border-r border-border-color hidden md:block">
-				<ul class="border-b border-border-color">
-					<li class="border-r border-border-color w-fit p-2 px-4">
-						<Icon name="mdi:vuejs" size="18px" />
-						contactPage.vue
-						<Icon name="mdi:close" size="18px" />
-					</li>
-				</ul>
-				<section class="h-full flex">
-					<article class="flex-1 p-4">
-						<p class="flex leading-8 text-white">
-							<span class="w-4 mr-4 h-full text-editor-text-color"
-								>1 2 3 4 5 6 7 8 9 10 11 12 13 14</span
-							>
-							const button = document.querySelector ( '#sendBtn'
-							);
-							<br />
-							const message = { <br />
-							&nbsp; &nbsp; name : "" , <br />
-							&nbsp; &nbsp; email : "" , <br />
-							&nbsp; &nbsp; message : "" , <br />
-							&nbsp; &nbsp; date: new Date() <br />
-							} <br />
-							button.addEventListener ( 'click' ), () => { <br />
-							&nbsp; &nbsp; form.send ( message ); <br />
-							})
-						</p>
-					</article>
-					<div
-						class="w-4 border-l border-border-color flex justify-center py-2"
-					>
-						<div class="bg-border-color w-3 h-2"></div>
-					</div>
-				</section>
+			<section class="w-1/2 border-r-4 border-light-border dark:border-dark-border hidden md:block">
+				<CodeEditor
+					:tabs="codeTabs"
+					:show-line-numbers="true"
+					language="javascript"
+				/>
 			</section>
 			<section class="w-full md:w-1/2">
-				<ul class="border-b border-border-color">
-					<li class="border-r border-border-color w-fit p-2 px-4">
+				<ul class="border-b-4 border-light-border dark:border-dark-border bg-light-surface dark:bg-dark-surface transition-colors duration-300">
+					<li class="border-r-4 border-light-border dark:border-dark-border w-fit p-2 px-4 font-black text-light-text dark:text-dark-text">
 						<Icon name="mdi:internet" size="18px" />
 						preview
 						<Icon name="mdi:close" size="18px" />
@@ -94,36 +66,36 @@
 				<section class="h-full flex">
 					<article class="flex-1 md:p-4 flex justify-center">
 						<form
-							class="bg-card-bg mt-4 w-fit p-4 md:p-8 rounded-md h-fit"
+							class="bg-light-card dark:bg-dark-card mt-4 w-fit p-4 md:p-8 border-4 border-light-border dark:border-dark-border shadow-brutal-lg h-fit transition-colors duration-300"
 							@submit.prevent="formSubmitted"
 						>
-							<h3 class="text-lg mb-4 text-white">
+							<h3 class="text-lg mb-4 text-light-text dark:text-dark-text font-black">
 								Your Feedback Matters
 							</h3>
-							<div class="text-white my-2">
-								<label class="block mb-1">_name:</label>
+							<div class="text-light-text dark:text-dark-text my-2">
+								<label class="block mb-1 font-bold">_name:</label>
 								<input
-									class="bg-editor-bg border-2 border-border-color rounded-md px-4 py-2"
+									class="bg-light-bg dark:bg-dark-bg border-4 border-light-border dark:border-dark-border px-4 py-2 transition-all duration-200 focus:border-light-accent dark:focus:border-dark-accent focus:outline-none font-mono"
 									type="text"
 									v-model="name"
 									required
 								/>
 							</div>
 
-							<div class="text-white my-2">
-								<label class="block mb-1">_email:</label>
+							<div class="text-light-text dark:text-dark-text my-2">
+								<label class="block mb-1 font-bold">_email:</label>
 								<input
-									class="bg-editor-bg border-2 border-border-color rounded-md px-4 py-2"
+									class="bg-light-bg dark:bg-dark-bg border-4 border-light-border dark:border-dark-border px-4 py-2 transition-all duration-200 focus:border-light-accent dark:focus:border-dark-accent focus:outline-none font-mono"
 									type="email"
 									v-model="email"
 									required
 								/>
 							</div>
 
-							<div class="text-white my-2">
-								<label class="block mb-1">_message:</label>
+							<div class="text-light-text dark:text-dark-text my-2">
+								<label class="block mb-1 font-bold">_message:</label>
 								<textarea
-									class="bg-editor-bg border-2 border-border-color rounded-md px-4 py-2 w-full"
+									class="bg-light-bg dark:bg-dark-bg border-4 border-light-border dark:border-dark-border px-4 py-2 w-full transition-all duration-200 focus:border-light-accent dark:focus:border-dark-accent focus:outline-none resize-none font-mono"
 									rows="5"
 									v-model="message"
 									required
@@ -133,7 +105,7 @@
 							<button
 								:disabled="loading"
 								type="submit"
-								class="px-4 mt-4 py-2 bg-card-btn rounded-md inline-flex items-center text-white"
+								class="px-6 mt-4 py-3 bg-light-accent dark:bg-dark-accent text-light-bg dark:text-dark-bg border-4 border-light-border dark:border-dark-border shadow-brutal hover:shadow-brutal-lg inline-flex items-center font-black transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-brutal disabled:opacity-50"
 								:class="loading && 'hover:cursor-not-allowed'"
 							>
 								<svg
@@ -160,9 +132,9 @@
 						</form>
 					</article>
 					<div
-						class="w-4 border-l border-border-color flex justify-center py-2"
+						class="w-4 border-l-4 border-light-border dark:border-dark-border flex justify-center py-2"
 					>
-						<div class="bg-border-color w-3 h-2"></div>
+						<div class="bg-light-border dark:bg-dark-border w-3 h-2"></div>
 					</div>
 				</section>
 			</section>
@@ -170,7 +142,7 @@
 	</section>
 	<div
 		id="toast-simple"
-		class="absolute bottom-2 right-4 flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+		class="fixed bottom-4 right-4 flex items-center w-full max-w-xs p-4 space-x-4 text-light-text dark:text-dark-text bg-light-card dark:bg-dark-card border-4 border-light-border dark:border-dark-border shadow-brutal-lg z-50"
 		role="alert"
 		v-if="toast"
 	>
@@ -196,18 +168,57 @@
 export default {
 	head() {
 		return {
-			title: "Contact me | letsbug",
+			title: "Contact Aniket Singh - Software Engineer | Hire, Connect, Collaborate",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
-					content: "Let's see how you can connect with me",
+					content: "Contact Aniket Singh - Software Engineer at DSHGSonic. Available for opportunities, collaborations, and hiring. Email: singhdharmvir81@gmail.com | Phone: +917559410568",
 				},
+				{
+					name: "keywords",
+					content: "Contact Aniket Singh, Hire Aniket Singh, Aniket Singh Email, Aniket Singh Phone, Software Engineer Contact, Hire Developer, Freelance Developer, DSHGSonic"
+				},
+				{
+					property: "og:title",
+					content: "Contact Aniket Singh - Software Engineer | Hire & Connect"
+				},
+				{
+					property: "og:description",
+					content: "Contact Aniket Singh - Software Engineer at DSHGSonic. Available for opportunities and collaborations."
+				},
+				{
+					property: "og:url",
+					content: "https://aniket.letsbug.in/contact"
+				},
+				{
+					rel: "canonical",
+					href: "https://aniket.letsbug.in/contact"
+				}
 			],
 		}
 	},
 	data() {
 		return {
+			codeTabs: [
+				{
+					id: 'contact-form',
+					filename: 'contactForm.js',
+					language: 'javascript',
+					code: `const button = document.querySelector('#sendBtn');
+
+const message = {
+  name: "",
+  email: "",
+  message: "",
+  date: new Date()
+}
+
+button.addEventListener('click', () => {
+  form.send(message);
+})`
+				}
+			],
 			externalLinks: [
 				{
 					name: "YouTube Channel",

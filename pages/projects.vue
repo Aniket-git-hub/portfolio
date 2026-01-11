@@ -1,9 +1,9 @@
 <template>
 	<section
-		class="h-full flex text-sm text-editor-text-color hide-scrollbar relative"
+		class="h-full flex text-sm text-light-text dark:text-dark-text hide-scrollbar relative"
 	>
 		<section
-			class="h-full border-r border-border-color w-60 hidden md:block"
+			class="h-full border-r-4 border-light-border dark:border-dark-border w-60 hidden md:block bg-light-surface dark:bg-dark-surface transition-colors duration-300"
 		>
 			<!-- <div class="border-b border-border-color px-4 py-2">
 				<Icon name="mdi:triangle-down" size="8px" /> _technology
@@ -11,7 +11,7 @@
 			<ul class="w-60">
 				<Accordion
 					title="_technology"
-					class="border-b border-border-color px-4 py-2"
+					class="border-b-4 border-light-border dark:border-dark-border px-4 py-2 font-black"
 				>
 					<li
 						class="px-3 py-2"
@@ -20,17 +20,17 @@
 					>
 						<label
 							:for="t.name"
-							class="hover:cursor-pointer hover:text-white"
-							:class="t.selected && 'text-white'"
+							class="hover:cursor-pointer transition-all duration-200 font-semibold"
+							:class="t.selected ? 'text-light-accent dark:text-dark-accent' : 'text-light-text-secondary dark:text-dark-text-secondary hover:text-light-text dark:hover:text-dark-text'"
 						>
 							<input
 								:id="t.name"
 								type="checkbox"
-								class="mx-3"
+								class="mx-3 w-4 h-4 accent-light-accent dark:accent-dark-accent"
 								name="technology"
 								v-model="t.selected"
 							/>
-							<Icon :name="t.icon" />
+							<Icon :name="t.icon" size="20px" />
 							<span class="px-2">
 								{{ t.name }}
 							</span>
@@ -40,34 +40,34 @@
 			</ul>
 		</section>
 		<section
-			class="h-full border-r border-border-color bg-editor-bg absolute z-30"
+			class="h-full border-r-4 border-light-border dark:border-dark-border bg-light-card dark:bg-dark-card absolute z-30 shadow-brutal-lg transition-colors duration-300"
 			:class="openSidebar === true ? 'block' : 'hidden'"
 		>
 			<section class="w-full flex justify-center">
 				<button
-					class="p-2 px-4 bg-card-bg m-3 text-white"
+					class="p-2 px-4 bg-light-accent dark:bg-dark-accent text-light-bg dark:text-dark-bg m-3 border-4 border-light-border dark:border-dark-border shadow-brutal hover:shadow-brutal-lg transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none font-bold"
 					@click="openSidebar = false"
 				>
 					Back
 					<Icon name="mdi:arrow-left" />
 				</button>
 			</section>
-			<ul class="w-60 border-t border-border-color">
-				<h3 class="py-2 px-6 text-md">_technology</h3>
+			<ul class="w-60 border-t-4 border-light-border dark:border-dark-border">
+				<h3 class="py-2 px-6 text-md font-black text-light-text dark:text-dark-text">_technology</h3>
 				<li class="px-3 py-2" v-for="t in technologies" :key="t.name">
 					<label
 						:for="t.name"
-						class="hover:cursor-pointer hover:text-white"
-						:class="t.selected && 'text-white'"
+						class="hover:cursor-pointer transition-all duration-200 font-semibold"
+						:class="t.selected ? 'text-light-accent dark:text-dark-accent' : 'text-light-text-secondary dark:text-dark-text-secondary hover:text-light-text dark:hover:text-dark-text'"
 					>
 						<input
 							:id="t.name"
 							type="checkbox"
-							class="mx-3"
+							class="mx-3 w-4 h-4 accent-light-accent dark:accent-dark-accent"
 							name="technology"
 							v-model="t.selected"
 						/>
-						<Icon :name="t.icon" />
+						<Icon :name="t.icon" size="20px" />
 						<span class="px-2">
 							{{ t.name }}
 						</span>
@@ -76,21 +76,25 @@
 			</ul>
 		</section>
 		<section class="flex-1">
-			<ul class="border-b border-border-color flex">
+			<ul class="border-b-4 border-light-border dark:border-dark-border flex bg-light-surface dark:bg-dark-surface transition-colors duration-300">
 				<li
-					class="border-r border-border-color hover:text-white w-fit p-2 px-4 md:hidden"
+					class="border-r-4 border-light-border dark:border-dark-border w-fit p-2 px-4 md:hidden transition-all duration-200 hover:bg-light-hover dark:hover:bg-dark-hover hover:shadow-brutal-sm"
 				>
-					<button @click="openSidebar = true">
+					<button @click="openSidebar = true" class="transition-transform duration-200 hover:scale-110">
 						<Icon name="mdi:filter" size="18px" />
 					</button>
 				</li>
 				<li
-					class="border-r border-border-color w-fit p-2 px-4"
+					class="border-r-4 border-light-border dark:border-dark-border w-fit p-2 px-4 flex items-center gap-2 transition-all duration-200 hover:bg-light-hover dark:hover:bg-dark-hover hover:shadow-brutal-sm font-semibold"
 					v-for="t in selectedTechnologies"
 					:key="t.name"
 				>
-					{{ t.name }};
-					<button v-if="!t.noClose" @click="removeTechnology(t)">
+					<span class="text-light-text dark:text-dark-text">{{ t.name }}</span>
+					<button 
+						v-if="!t.noClose" 
+						@click="removeTechnology(t)"
+						class="transition-transform duration-200 hover:scale-125 hover:text-light-accent dark:hover:text-dark-accent"
+					>
 						<Icon name="mdi:close" size="18px" />
 					</button>
 				</li>
@@ -115,14 +119,34 @@ const images = import.meta.globEager("../assets/*.png")
 export default {
 	head() {
 		return {
-			title: "Aniket's Project | letsbug",
+			title: "Aniket Singh Projects - Portfolio | PodcastInc AI, BookifyCall, InformedALF",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
 					content:
-						"Get to know the projects that I have built over the years...",
+						"View Aniket Singh's portfolio projects including PodcastInc AI, BookifyCall, InformedALF, and more. Full-stack applications built with Laravel, PHP, Next.js, Node.js, Python, and Docker.",
 				},
+				{
+					name: "keywords",
+					content: "Aniket Singh Projects, Aniket Singh Portfolio, PodcastInc AI, BookifyCall, InformedALF, Software Engineer Projects, Full-Stack Projects, Laravel Projects, Next.js Projects, Web Development Portfolio"
+				},
+				{
+					property: "og:title",
+					content: "Aniket Singh Projects - Portfolio | Software Engineer Work"
+				},
+				{
+					property: "og:description",
+					content: "View Aniket Singh's portfolio projects including PodcastInc AI, BookifyCall, InformedALF, and more full-stack applications."
+				},
+				{
+					property: "og:url",
+					content: "https://aniket.letsbug.in/projects"
+				},
+				{
+					rel: "canonical",
+					href: "https://aniket.letsbug.in/projects"
+				}
 			],
 		}
 	},
@@ -130,6 +154,36 @@ export default {
 		return {
 			openSidebar: false,
 			technologies: [
+				{
+					name: "Laravel",
+					icon: "devicon:laravel",
+					selected: false,
+				},
+				{
+					name: "PHP",
+					icon: "devicon:php",
+					selected: false,
+				},
+				{
+					name: "Next.js",
+					icon: "skill-icons:nextjs-light",
+					selected: false,
+				},
+				{
+					name: "Node.js",
+					icon: "mdi:nodejs",
+					selected: false,
+				},
+				{
+					name: "Python",
+					icon: "logos:python",
+					selected: false,
+				},
+				{
+					name: "Docker",
+					icon: "devicon:docker",
+					selected: false,
+				},
 				{
 					name: "React",
 					icon: "mdi:react",
@@ -141,8 +195,13 @@ export default {
 					selected: false,
 				},
 				{
-					name: "Nodejs",
-					icon: "mdi:nodejs",
+					name: "LLMs",
+					icon: "simple-icons:openai",
+					selected: false,
+				},
+				{
+					name: "Redis",
+					icon: "devicon:redis",
 					selected: false,
 				},
 				{
@@ -155,32 +214,63 @@ export default {
 					icon: "tabler:file-type-sql",
 					selected: false,
 				},
-				{
-					name: "Java",
-					icon: "cib:java",
-					selected: false,
-				},
-				{
-					name: "Vercel",
-					icon: "akar-icons:vercel-fill",
-					selected: false,
-				},
-				{
-					name: "Render",
-					icon: "simple-icons:render",
-					selected: false,
-				},
-				{
-					name: "Firebase",
-					icon: "teenyicons:firebase-solid",
-					selected: false,
-				},
 			],
 			projects: [
 				{
+					name: "PodcastInc AI",
+					description:
+						"AI-powered podcast platform with full-stack implementation. Features include content generation, audio processing, and intelligent recommendations.",
+					img: images["../assets/dashboard.png"].default,
+					technologies: [
+						"Laravel",
+						"PHP",
+						"Next.js",
+						"Node.js",
+						"LLMs",
+						"Docker",
+						"Python",
+						"Redis",
+					],
+					sourceCode: "#",
+					projectLink: "https://podcastinc.ai",
+				},
+				{
+					name: "BookifyCall",
+					description:
+						"Full-stack booking and scheduling platform with real-time availability management, calendar integration, and automated notifications.",
+					img: images["../assets/dashboard_1.png"].default,
+					technologies: [
+						"Laravel",
+						"PHP",
+						"Next.js",
+						"Node.js",
+						"Docker",
+						"Redis",
+						"SQL",
+					],
+					sourceCode: "#",
+					projectLink: "https://bookifycall.com",
+				},
+				{
+					name: "InformedALF",
+					description:
+						"Information management platform with AI capabilities. Built with modern frontend and backend technologies for efficient data processing.",
+					img: images["../assets/portfolio.png"].default,
+					technologies: [
+						"Next.js",
+						"Node.js",
+						"Python",
+						"Docker",
+						"Redis",
+						"SQL",
+					],
+					sourceCode: "#",
+					projectLink: "https://informedalf.com",
+				},
+				{
 					name: "Portfolio Site",
 					description:
-						"This is my portfolio website that you are currently browsing",
+						"Modern portfolio website built with Nuxt 3, featuring SSR, optimized performance, and a developer-friendly editor theme.",
 					img: images["../assets/portfolio.png"].default,
 					technologies: [
 						"Vue",
@@ -188,62 +278,26 @@ export default {
 						"SSR",
 						"Vercel",
 						"Javascript",
+						"Tailwind",
 					],
 					sourceCode: "https://github.com/Aniket-git-hub/portfolio",
 					projectLink: "https://aniket.letsbug.in",
 				},
 				{
 					name: "32 Beads Game",
-					description: "This is a online multiplayer board game.",
+					description: "Online multiplayer board game with real-time synchronization and interactive gameplay.",
 					img: images["../assets/dashboard_1.png"].default,
 					technologies: [
 						"React",
-						"ChakraUI",
-						"MongoDB",
 						"Nodejs",
+						"MongoDB",
 						"Expressjs",
 						"Vercel",
 						"Render",
-						"Git",
-						"Github",
 						"Javascript",
 					],
 					sourceCode: "https://github.com/Aniket-git-hub/32si",
 					projectLink: "https://32beads.letsbug.in/",
-				},
-				{
-					name: "ERP Project",
-					img: images["../assets/payroll-1.png"].default,
-					description:
-						"This is android projects that helps small businesses with their attendance record and payments",
-					technologies: ["Java", "Android", "Sqlite"],
-					sourceCode:
-						"https://github.com/Aniket-git-hub/payrollSystem",
-					projectLink:
-						"https://github.com/Aniket-git-hub/payrollSystem",
-					technologies: ["SQL", "Sqlite", "Android", "Java"],
-				},
-				{
-					name: "Social Network",
-					description: "Social networking web application",
-					img: images["../assets/dashboard.png"].default,
-					projectLink:
-						"https://github.com/Aniket-git-hub/socialNetwork",
-					sourceCode:
-						"https://github.com/Aniket-git-hub/socialNetwork",
-					technologies: [
-						"Vue",
-						"Nodejs",
-						"MongoDB",
-						"Git",
-						"Expressjs",
-						"Heroku",
-						"Firebase",
-						"Tailwind",
-						"CSS",
-						"HTML",
-						"Javascript",
-					],
 				},
 			],
 		}

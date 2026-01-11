@@ -1,55 +1,55 @@
 <template>
-	<section class="h-full flex text-sm text-white">
-		<section class="border-r border-border-color md:w-60 flex relative">
-			<section class="border-r border-border-color py-4">
+	<section class="h-full flex text-sm text-light-text dark:text-dark-text overflow-hidden">
+		<section class="border-r-4 border-light-border dark:border-dark-border md:w-60 flex flex-col relative bg-light-surface dark:bg-dark-surface transition-colors duration-300 min-w-0">
+			<section class="border-r-4 border-light-border dark:border-dark-border py-4 flex-shrink-0">
 				<div
-					class="p-4 text-border-color hover:cursor-pointer hover:text-white"
+					class="p-4 hover:cursor-pointer transition-all duration-200 hover:shadow-brutal-sm"
 					:class="
 						activeSidebar === 'ExperiencesSidebar'
-							? 'text-white'
-							: 'text-border-color'
+							? 'text-light-text dark:text-dark-text bg-light-accent dark:bg-dark-accent'
+							: 'text-light-text-secondary dark:text-dark-text-secondary hover:bg-light-hover dark:hover:bg-dark-hover'
 					"
 					@click="changeActiveSidebar('ExperiencesSidebar')"
 				>
-					<button>
-						<Icon name="icon-park-solid:terminal" />
+					<button class="transition-transform duration-200 hover:scale-110">
+						<Icon name="icon-park-solid:terminal" size="24px" />
 					</button>
 				</div>
 				<div
-					class="p-4 text-border-color hover:cursor-pointer hover:text-white"
+					class="p-4 hover:cursor-pointer transition-all duration-200 hover:shadow-brutal-sm"
 					:class="
 						activeSidebar === 'PersonalInfoSidebar'
-							? 'text-white'
-							: 'text-border-color'
+							? 'text-light-text dark:text-dark-text bg-light-accent dark:bg-dark-accent'
+							: 'text-light-text-secondary dark:text-dark-text-secondary hover:bg-light-hover dark:hover:bg-dark-hover'
 					"
 					@click="changeActiveSidebar('PersonalInfoSidebar')"
 				>
-					<button>
-						<Icon name="icon-park-solid:personal-collection" />
+					<button class="transition-transform duration-200 hover:scale-110">
+						<Icon name="icon-park-solid:personal-collection" size="24px" />
 					</button>
 				</div>
 				<div
-					class="p-4 text-border-color hover:cursor-pointer hover:text-white"
+					class="p-4 hover:cursor-pointer transition-all duration-200 hover:shadow-brutal-sm"
 					:class="
 						activeSidebar === 'HobbiesInfo'
-							? 'text-white'
-							: 'text-border-color'
+							? 'text-light-text dark:text-dark-text bg-light-accent dark:bg-dark-accent'
+							: 'text-light-text-secondary dark:text-dark-text-secondary hover:bg-light-hover dark:hover:bg-dark-hover'
 					"
 					@click="changeActiveSidebar('HobbiesInfo')"
 				>
-					<button>
-						<Icon name="icon-park-solid:game-ps" />
+					<button class="transition-transform duration-200 hover:scale-110">
+						<Icon name="icon-park-solid:game-ps" size="24px" />
 					</button>
 				</div>
 			</section>
-			<Component :is="activeSidebar" class="hidden md:block" />
+			<Component :is="activeSidebar" class="hidden md:block flex-1 overflow-y-auto hide-scrollbar min-w-0" />
 			<section
 				:class="openSidebar ? 'block' : 'hidden'"
-				class="absolute z-50 bg-editor-bg h-full pb-5 border-r border-b border-border-color flex-col"
+				class="absolute z-50 bg-light-card dark:bg-dark-card h-full pb-5 border-r-4 border-b-4 border-light-border dark:border-dark-border flex-col shadow-brutal-lg transition-colors duration-300"
 			>
 				<section class="w-full flex justify-center">
 					<button
-						class="p-2 px-4 bg-card-bg m-3"
+						class="p-2 px-4 bg-light-accent dark:bg-dark-accent text-light-bg dark:text-dark-bg m-3 border-4 border-light-border dark:border-dark-border shadow-brutal hover:shadow-brutal-lg transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none font-bold"
 						@click="openSidebar = false"
 					>
 						Back
@@ -59,7 +59,7 @@
 				<Component :is="activeSidebar" />
 			</section>
 		</section>
-		<Component :is="activeContent" />
+		<Component :is="activeContent" class="flex-1 overflow-hidden min-w-0" />
 	</section>
 </template>
 
@@ -92,14 +92,34 @@ export default {
 	},
 	head() {
 		return {
-			title: "About Aniket | letsbug",
+			title: "About Aniket Singh - Software Engineer | Education, Experience, Skills",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
 					content:
-						"know about aniket's education, experiences, skills and more...",
+						"Learn about Aniket Singh - Software Engineer at DSHGSonic. View education, work experience, technical skills (Laravel, PHP, Next.js, Node.js, Python, Docker, LLMs), and professional background.",
 				},
+				{
+					name: "keywords",
+					content: "Aniket Singh, About Aniket Singh, Software Engineer Resume, Aniket Singh Education, Aniket Singh Experience, Aniket Singh Skills, DSHGSonic, Full-Stack Developer Profile"
+				},
+				{
+					property: "og:title",
+					content: "About Aniket Singh - Software Engineer | Education, Experience, Skills"
+				},
+				{
+					property: "og:description",
+					content: "Learn about Aniket Singh - Software Engineer at DSHGSonic. View education, work experience, technical skills, and professional background."
+				},
+				{
+					property: "og:url",
+					content: "https://aniket.letsbug.in/about"
+				},
+				{
+					rel: "canonical",
+					href: "https://aniket.letsbug.in/about"
+				}
 			],
 		}
 	},
